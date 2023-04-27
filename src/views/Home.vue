@@ -15,11 +15,11 @@
         playsinline
         preload="auto"
         title="首頁影片"
-        src="../assets/video/home-max.mp4"
+        src="@assets/video/home-max.mp4"
         type="video/mp4"
       >
         <source
-          src="../assets/video/home-max.mp4"
+          src="@assets/video/home-max.mp4"
           type="video/mp4"
         />
       </video>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import SideMenu from '../components/home/SideMenu.vue';
 
@@ -47,13 +47,16 @@ export default {
 
     store.dispatch('setHeaderHidden', true);
 
-    window.addEventListener('mousewheel', () => {
-      if (store.getters.getHeaderHidden) {
-        setTimeout(() => {
-          store.dispatch('setHeaderHidden', false);
-        }, 500);
-      }
+    onMounted(() => {
+      window.addEventListener('mousewheel', () => {
+        if (store.getters.getHeaderHidden) {
+          setTimeout(() => {
+            store.dispatch('setHeaderHidden', false);
+          }, 500);
+        }
+      });
     });
+
 
 
     return {
@@ -62,44 +65,45 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .home {
   height: 100%;
   display: flex;
   justify-content: space-between;
-}
+  &.min {
+    height: calc(100% - 90px);
+  }
 
-.home.min,
-.sideMenu {
-  height: calc(100% - 90px);
-}
+  .video_row {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    &:min {
+      height: 100%;
+      width: 60%;
+      transition: height 1s ease;
+      transition: width 1s ease;
+    }
 
-.video_row {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
+    .video {
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-.video_row.min {
-  height: 100%;
-  width: 70%;
-  transition: height 1s ease;
-  transition: width 1s ease;
-}
+  .sideMenu {
+    height: 100%;
+  }
 
-.video {
-  object-fit: fill;
-  width: 100%;
-  height: 100%;
-}
+  .hiddenSideMenu {
+    opacity: 0;
+  }
 
-.hiddenSideMenu {
-  opacity: 0;
-}
-
-.showSideMenu {
-  width: 30%;
-  animation: fadein 3s ease;
+  .showSideMenu {
+    width: 40%;
+    animation: fadein 3s ease;
+  }
 }
 
 @keyframes fadein {

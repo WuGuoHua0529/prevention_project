@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <img src="../../assets/img/footer.png">
+    <img src="@assets/img/footer.png">
   </div>
 </template>
 
@@ -13,15 +13,15 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   position: absolute;
   bottom: 0;
   line-height: 0;
   width: 100%;
-}
 
-.footer img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 </style>

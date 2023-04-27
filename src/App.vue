@@ -26,4 +26,8 @@ body,
 #app {
   height: 100%;
 }
+
+#app {
+  background-color: #f5f5f5;
+}
 </style>

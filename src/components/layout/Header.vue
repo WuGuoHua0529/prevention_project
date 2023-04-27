@@ -3,13 +3,16 @@
     class="header"
     :class="{ 'hidden': hiddenHeaderStates  }"
   >
-    <div class="row_header">
-      <div class="title_header">一起來防災</div>
-      <ul class="ul_header">
+    <div class="row">
+      <div class="title">
+        <img src="@assets/img/logo.png" />
+        一起來防災
+      </div>
+      <!-- <ul class="ul_header">
         <li>每天一點防災知識</li>
         <li>災害來臨需要的資訊</li>
         <li>小遊戲</li>
-      </ul>
+      </ul> -->
       <div
         class="burger"
         @click="listOpenStates = !listOpenStates"
@@ -22,10 +25,10 @@
       </div>
     </div>
     <div
-      class="list_header"
+      class="list"
       :class="{ 'open': listOpenStates }"
     >
-      <div class="list_row">
+      <div class="row">
         <ul>
           <li class="title">為梅雨及颱風季節做好準備</li>
           <li>災害可能發生的地方</li>
@@ -83,45 +86,48 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .header {
   background-color: #50afbd;
   height: 90px;
   width: 100%;
   transition: height 1s ease;
+  &.hidden {
+    height: 0px;
+  }
+
+  .row {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    img {
+      margin-right: 10px;
+    }
+  }
 }
 
-.header.hidden {
-  height: 0px;
-}
+// .ul_header {
+//   height: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   list-style-type: none;
+//   font-weight: 500;
+//   font-size: 1rem;
+// }
 
-.row_header {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 8%;
-  color: white;
-}
-
-.title_header {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.ul_header {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.ul_header li {
-  padding: 0 0.5rem;
-}
+// .ul_header li {
+//   padding: 0 0.5rem;
+// }
 
 .burger {
   width: 50px;
@@ -136,110 +142,105 @@ export default {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    &:nth-child(1) {
+      top: 42%;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 50%;
+      opacity: 0;
+    }
+    &:nth-child(4) {
+      top: 58%;
+    }
+  }
+
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 42%;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+        transform: rotate(20deg);
+        opacity: 1;
+      }
+      &:nth-child(3) {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        opacity: 1;
+      }
+      &:nth-child(4) {
+        top: 58%;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
 }
 
-.burger span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: white;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-
-.burger span:nth-child(1) {
-  top: 42%;
-}
-
-.burger span:nth-child(2),
-.burger span:nth-child(3) {
-  top: 50%;
-  opacity: 0;
-}
-
-.burger span:nth-child(4) {
-  top: 58%;
-}
-
-.burger.open span:nth-child(1) {
-  top: 42%;
-  width: 0%;
-  left: 50%;
-}
-
-.burger.open span:nth-child(2) {
-  -webkit-transform: rotate(20deg);
-  -moz-transform: rotate(20deg);
-  -o-transform: rotate(20deg);
-  transform: rotate(20deg);
-  opacity: 1;
-}
-
-.burger.open span:nth-child(3) {
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  opacity: 1;
-}
-
-.burger.open span:nth-child(4) {
-  top: 58%;
-  width: 0%;
-  left: 50%;
-}
-
-.list_header {
+.list {
   width: 100%;
   height: 0px;
   transition: height 0.5s ease;
   position: relative;
   overflow: hidden;
-}
+  &.open {
+    height: 218px;
+  }
 
-.list_header.open {
-  height: 218px;
-}
+  .row {
+    height: 100%;
+    padding: 60px 100px;
+    background: #bedee4;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.list_row {
-  height: 100%;
-  padding: 60px 100px;
-  background: #bedee4;
-  display: flex;
-  justify-content: space-between;
-}
+  ul {
+    list-style-type: none;
+    li {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.5rem;
+      line-height: 23px;
+      letter-spacing: 0.05em;
+      color: #008396;
+      &:not(.title) {
+        cursor: pointer;
+      }
+    }
 
-.list_header ul {
-  list-style-type: none;
-}
-
-.list_header ul li {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.5rem;
-  line-height: 23px;
-  letter-spacing: 0.05em;
-  color: #008396;
-}
-
-.list_header ul li:not(.title) {
-  cursor: pointer;
-}
-
-.list_header ul .title {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 29px;
-  color: #008396;
+    .title {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 29px;
+      color: #008396;
+    }
+  }
 }
 </style>

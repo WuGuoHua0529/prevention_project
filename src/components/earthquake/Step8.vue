@@ -5,8 +5,14 @@
   </div>
 
   <div class="step8_ex">
-    <div class="step8_ex_img" ref="imgBox">
-      <img :src="require(`@assets/img/Group_step8_${imgNumber}.png`)" alt="" />
+    <div
+      class="step8_ex_img"
+      ref="imgBox"
+    >
+      <img
+        :src="require(`@assets/img/earthquake/step8/Group_step8_${imgNumber}.png`)"
+        alt=""
+      />
     </div>
     <div class="step8_ex_info">
       <ul>
@@ -29,7 +35,7 @@
 import { reactive, ref } from "vue";
 export default {
   name: "Step8",
-  setup() {
+  setup () {
     const imgNumber = ref(0);
     const listNumber = ref(null);
     const listData = reactive([
@@ -71,16 +77,12 @@ export default {
     ]);
 
     window.addEventListener("scroll", (e) => {
-      // console.log(e);
-      // console.log(window.scrollY, listNumber.value);
       listNumber.value.forEach((item, index) => {
-        // console.log( item.offsetTop - item.offsetHeight - 180);
         if (
           window.scrollY > item.offsetTop - item.offsetHeight - 90 &&
           index > imgNumber.value
         ) {
           imgNumber.value = index;
-          // console.log(imgNumber.value);
         }
 
         if (window.scrollY < item.offsetTop && index < imgNumber.value) {
@@ -88,10 +90,6 @@ export default {
         }
       });
     });
-
-    // if(window.scrollY > listNumber ) {
-
-    // }
 
     return {
       listData,
@@ -103,7 +101,6 @@ export default {
 </script>
 
 <style>
-/* step8 */
 .step8_container {
   margin: 300px auto 0 auto;
   width: 1100px;

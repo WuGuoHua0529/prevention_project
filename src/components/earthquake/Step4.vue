@@ -12,60 +12,160 @@
   <div class="step4_circles">
     <div class="circle_1">
       <p class="circle_title">食物</p>
-      <img class="cookies1 move1" src="../image/RORBVO_2_.png" alt="" />
-      <img class="cookies2 move3" src="../image/E9yE29_2_.png" alt="" />
+      <img
+        class="cookies1 move1"
+        src="@assets/img/earthquake/step4/RORBVO_2_.png"
+        alt=""
+      />
+      <img
+        class="cookies2 move3"
+        src="@assets/img/earthquake/step4/E9yE29_2_.png"
+        alt=""
+      />
       <p class="cookies_text">體積小熱量高的巧克餅、餅乾</p>
-      <img class="water1 move2" src="../image/KUISSN_2_.png" alt="" />
-      <img class="water2 move4" src="../image/CStUGb_2_.png" alt="" />
+      <img
+        class="water1 move2"
+        src="@assets/img/earthquake/step4/KUISSN_2_.png"
+        alt=""
+      />
+      <img
+        class="water2 move4"
+        src="@assets/img/earthquake/step4/CStUGb_2_.png"
+        alt=""
+      />
       <p class="water_text">飲用水</p>
     </div>
     <div class="circle_2">
       <p class="circle_title">人生安全</p>
-      <img class="phone move1" src="../image/IyhVEp_2_.png" alt="" />
+      <img
+        class="phone move1"
+        src="@assets/img/earthquake/step4/IyhVEp_2_.png"
+        alt=""
+      />
       <p class="phone_text">手機</p>
-      <img class="light1 move3" src="../image/JaHQae_2_.png" alt="" />
-      <img class="light2 move2" src="../image/u672tY_2_.png" alt="" />
+      <img
+        class="light1 move3"
+        src="@assets/img/earthquake/JaHQae_2_.png"
+        alt=""
+      />
+      <img
+        class="light2 move2"
+        src="@assets/img/earthquake/step4/u672tY_2_.png"
+        alt=""
+      />
       <p class="light_text">掛頸燈、頭燈、手電筒</p>
-      <img class="battery move4" src="../image/lSO0fI_2_.png" alt="" />
+      <img
+        class="battery move4"
+        src="@assets/img/earthquake/step4/lSO0fI_2_.png"
+        alt=""
+      />
       <p class="battery_text">行動電源</p>
-      <img class="whistle move2" src="../image/_x38_jraR9_2_.png" alt="" />
+      <img
+        class="whistle move2"
+        src="@assets/img/earthquake/step4/_x38_jraR9_2_.png"
+        alt=""
+      />
       <p class="whistle_text">哨子</p>
-      <img class="drug1 move4" src="../image/_x34_3nlcX_2_.png" alt="" />
-      <img class="drug2 move2" src="../image/Group1.png" alt="" />
+      <img
+        class="drug1 move4"
+        src="@assets/img/earthquake/_x34_3nlcX_2_.png"
+        alt=""
+      />
+      <img
+        class="drug2 move2"
+        src="@assets/img/earthquake/Group1.png"
+        alt=""
+      />
       <p class="drug_text">隨身急救包、藥物</p>
-      <img class="gear1 move1" src="../image/Hpimgr_2_.png" alt="" />
-      <img class="gear2 move3" src="../image/UW6fuu_2_.png" alt="" />
+      <img
+        class="gear1 move1"
+        src="@assets/img/earthquake/step4/Hpimgr_2_.png"
+        alt=""
+      />
+      <img
+        class="gear2 move3"
+        src="@assets/img/earthquake/step4/UW6fuu_2_.png"
+        alt=""
+      />
       <p class="gear_text">雨具</p>
     </div>
     <div class="circle_3">
       <p class="circle_title">資訊蒐集</p>
-      <img class="map move2" src="../image/iN060x_2_.png" alt="" />
+      <img
+        class="map move2"
+        src="@assets/img/earthquake/step4/iN060x_2_.png"
+        alt=""
+      />
       <p class="map_text">避難地圖</p>
-      <img class="photo move4" src="../image/_x38_EXzcG_2_.png" alt="" />
+      <img
+        class="photo move4"
+        src="@assets/img/earthquake/step4/_x38_EXzcG_2_.png"
+        alt=""
+      />
       <p class="photo_text">家人照片</p>
-      <img class="pen move1" src="../image/_x31_QZjty_2_.png" alt="" />
+      <img
+        class="pen move1"
+        src="@assets/img/earthquake/step4/_x31_QZjty_2_.png"
+        alt=""
+      />
       <p class="pen_text">書寫工具(紙、筆)</p>
     </div>
     <div class="circle_4">
       <p class="circle_title">衛生清潔</p>
-      <img class="cloth1 move3" src="../image/sokS9B_2_.png" alt="" />
-      <img class="cloth2 move1" src="../image/ViuWam_2_.png" alt="" />
-      <img class="cloth3 move2" src="../image/JyTQBk_2_.png" alt="" />
+      <img
+        class="cloth1 move3"
+        src="@assets/img/earthquake/step4/sokS9B_2_.png"
+        alt=""
+      />
+      <img
+        class="cloth2 move1"
+        src="@assets/img/earthquake/step4/ViuWam_2_.png"
+        alt=""
+      />
+      <img
+        class="cloth3 move2"
+        src="@assets/img/earthquake/step4/JyTQBk_2_.png"
+        alt=""
+      />
       <p class="cloth_text">換穿衣物</p>
-      <img class="brush move4" src="../image/YiecvT_2_.png" alt="" />
+      <img
+        class="brush move4"
+        src="@assets/img/earthquake/step4/YiecvT_2_.png"
+        alt=""
+      />
       <p class="brush_text">牙刷組</p>
-      <img class="bag move2" src="../image/SXOpX9_2_.png" alt="" />
+      <img
+        class="bag move2"
+        src="@assets/img/earthquake/step4/SXOpX9_2_.png"
+        alt=""
+      />
       <p class="bag_text">塑膠袋</p>
-      <img class="alcohol move4" src="../image/vELxjk_2_.png" alt="" />
+      <img
+        class="alcohol move4"
+        src="@assets/img/earthquake/step4/vELxjk_2_.png"
+        alt=""
+      />
       <p class="alcohol_text">酒精</p>
     </div>
     <div class="circle_5">
       <p class="circle_title">貴重物品</p>
-      <img class="cash move1" src="../image/ZVh3rN_2_.png" alt="" />
+      <img
+        class="cash move1"
+        src="@assets/img/earthquake/step4/ZVh3rN_2_.png"
+        alt=""
+      />
       <p class="cash_text">現金(震後可能停止電子交易)</p>
-      <img class="key move3" src="../image/VWRAGd_2_.png" alt="" />
+      <img
+        class="key move3"
+        src="@assets/img/earthquake/step4/VWRAGd_2_.png"
+        alt=""
+      />
       <p class="key_text">鑰匙</p>
-      <img class="card move2" src="../image/TwCaMK_2_.png" alt="" />
+      <img
+        class="card move2"
+        src="@assets/img/earthquake/step4/TwCaMK_2_.png"
+        alt=""
+      />
       <p class="card_text">重要證件(身分證、健保卡)</p>
     </div>
   </div>
@@ -73,7 +173,7 @@
 
 <script>
 export default {
-    name:'Step4'
+  name: 'Step4'
 }
 </script>
 

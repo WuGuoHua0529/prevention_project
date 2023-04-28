@@ -34,7 +34,7 @@
 <script>
 import { computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
-import SideMenu from '../components/home/SideMenu.vue';
+import SideMenu from '@components/home/SideMenu.vue';
 
 export default {
   name: 'Home',

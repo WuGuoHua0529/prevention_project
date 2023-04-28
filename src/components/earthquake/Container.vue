@@ -11,12 +11,11 @@
 
 <script>
 export default {
-    name:'Container'
+  name: 'Container'
 }
 </script>
 
 <style>
-/* container */
 .container {
   height: 124px;
   padding: 124px 360px;
@@ -25,10 +24,8 @@ export default {
 }
 
 .container .container_center {
-  /* width: 1100px; */
   display: flex;
   justify-content: space-between;
-  /* margin-left: -80px; */
 }
 
 .container .container_title {
@@ -45,5 +42,4 @@ export default {
   line-height: 38px;
   color: #5e5e5e;
 }
-
 </style>

@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   // 只作用于当前目录
   root: true,
@@ -39,4 +41,17 @@ module.exports = {
       rules: {}
     }
   ],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'],
+          ['@assets', './src/assets'],
+          ['@components', './src/components'],
+          ['@views', './src/views'],
+          ['@views', './src/views'],
+        ],
+      },
+    },
+  }
 }

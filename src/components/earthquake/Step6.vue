@@ -1,7 +1,10 @@
 <template>
   <div class="step6_container">
     <div class="step6_img">
-      <img src="../image/Group拷貝2.png" alt="" />
+      <img
+        src="@assets/img/earthquake/step6/Group拷貝2.png"
+        alt=""
+      />
     </div>
     <div class="step6_info">
       <div class="step6_number">6</div>
@@ -15,12 +18,11 @@
 
 <script>
 export default {
-    name:"Step6"
+  name: "Step6"
 }
 </script>
 
 <style>
-/* step6 */
 .step6_container {
   margin: 400px auto 0 auto;
   width: 1100px;

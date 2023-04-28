@@ -8,29 +8,38 @@
         另外，也可利用消防e點通APP，進入親友協尋功能，即可使用災區親友現況查詢平台。
       </div>
       <div class="step5_tip">
-        <a href="https://portal2.emic.gov.tw/FIS2_Develop/Masses"
-          >災區親友現況查詢平台</a
-        >
-        <img src="../image/Group4.png" alt="" />
+        <a href="https://portal2.emic.gov.tw/FIS2_Develop/Masses">災區親友現況查詢平台</a>
+        <img src="@assets/img/earthquake/nextArrow.png" />
       </div>
     </div>
     <div class="step5_img">
-      <img class="img_top" src="../image/Group-2.png" alt="" />
-      <img class="img_left" src="../image/Group-1.png" alt="" />
-      <img class="img_right" src="../image/Group拷貝.png" alt="" />
-      <img class="img_center" src="../image/Group206.png" alt="" />
+      <img
+        class="img_top"
+        src="@assets/img/earthquake/step5/Group-2.png"
+      />
+      <img
+        class="img_left"
+        src="@assets/img/earthquake/step5/Group-1.png"
+      />
+      <img
+        class="img_right"
+        src="@assets/img/earthquake/step5/Group拷貝.png"
+      />
+      <img
+        class="img_center"
+        src="@assets/img/earthquake/step5/Group206.png"
+      />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name:'Step5'
+  name: 'Step5'
 }
 </script>
 
 <style>
-/* step5 */
 .step5_container {
   margin: 0 auto;
   width: 1100px;
@@ -95,7 +104,7 @@ export default {
   content: "";
   width: 24px;
   height: 24px;
-  background-image: url(../image/idea\ 2.png);
+  background-image: url(@assets/img/earthquake/idea.png);
   position: absolute;
   top: 2px;
   left: -28px;

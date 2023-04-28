@@ -1,5 +1,5 @@
 <template>
-   <div class="step7_container">
+  <div class="step7_container">
     <div class="step7_info">
       <div class="step7_number">7</div>
       <div class="step7_title">進行臨震行為與避難練習</div>
@@ -8,19 +8,21 @@
       </div>
     </div>
     <div class="step7_img">
-      <img src="../image/Frame.png" alt="" />
+      <img
+        src="@assets/img/earthquake/step7/Frame.png"
+        alt=""
+      />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name:'Step7'
+  name: 'Step7'
 }
 </script>
 
 <style>
-/* step7 */
 .step7_container {
   margin: 300px auto 0 auto;
   width: 1100px;

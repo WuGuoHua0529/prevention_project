@@ -1,34 +1,38 @@
 <template>
-  <div
+  <Row
     class="home"
     :class="{ 'min': headerHidden === false }"
   >
-    <div
+    <Col
       class="video_row"
       :class="{ 'min': headerHidden === false }"
+      :lg="headerHidden ? 24 : 16"
     >
-      <video
-        class="video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        title="首頁影片"
+    <video
+      class="video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      title="首頁影片"
+      src="@assets/video/home-max.mp4"
+      type="video/mp4"
+    >
+      <source
         src="@assets/video/home-max.mp4"
         type="video/mp4"
-      >
-        <source
-          src="@assets/video/home-max.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-    <SideMenu
+      />
+    </video>
+    </Col>
+    <Col
       v-if="!headerHidden"
+      :lg="8"
       :class="headerHidden ? 'hiddenSideMenu' : 'showSideMenu'"
-    />
-  </div>
+    >
+    <SideMenu />
+    </Col>
+  </Row>
 </template>
 
 <script>
@@ -45,7 +49,7 @@ export default {
     const store = useStore();
     const headerHidden = computed(() => store.getters.getHeaderHidden);
 
-    store.dispatch('setHeaderHidden', true);
+    // store.dispatch('setHeaderHidden', true);
 
     onMounted(() => {
       window.addEventListener('mousewheel', () => {
@@ -76,11 +80,13 @@ export default {
 
   .video_row {
     overflow: hidden;
-    height: 100%;
     width: 100%;
+    @media (min-width: 992px) {
+      height: 100%;
+    }
+
     &:min {
       height: 100%;
-      width: 60%;
       transition: height 1s ease;
       transition: width 1s ease;
     }
@@ -101,7 +107,7 @@ export default {
   }
 
   .showSideMenu {
-    width: 40%;
+    height: 100%;
     animation: fadein 3s ease;
   }
 }

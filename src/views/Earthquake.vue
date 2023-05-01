@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .step_title {
   font-weight: 700;
   font-size: 78px;

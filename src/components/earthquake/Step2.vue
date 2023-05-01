@@ -208,7 +208,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .step2_container {
   margin: 200px auto 0 auto;
   width: 700px;

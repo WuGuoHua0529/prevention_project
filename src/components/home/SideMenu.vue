@@ -1,46 +1,31 @@
 <template>
   <div class="sideMenu">
     <div class="title">每天一點防災知識</div>
-    <ul>
-      <li
-        v-for="item in listData"
-        :key="item.number"
-        class="list_li"
-        :class="{ 'active': item.number === currentNumber }"
-        @click="currentNumber = item.number"
-      >
-        <span class="list_number">{{ item.number }}</span>
-        <div>
-          <div class="list_title">{{ item.title }}</div>
-          <div
-            class="list_content"
-            :class="{ 'active': item.number === currentNumber }"
-          >
-            {{ item.content }}
-          </div>
-        </div>
-      </li>
-    </ul>
-    <div class="title">發生災害時想看的資訊</div>
-    <Row class="list_two">
-      <Col
-        v-for="(item, index) in listTwoData"
-        :key="`circle_${index}`"
-        class="circle_row"
-        span="12"
-      >
-      <div class="white_circle">
-        <!-- <p>{{ item.title }}</p> -->
-        <img
-          v-for="it in item.data"
-          :key="`img_${it}`"
-          class="info_img"
-          :src="require(`@assets/img/home/info-${it}.png`)"
-        />
-      </div>
+    <ListDrawer :data="listData" />
 
-      </Col>
-    </Row>
+    <div class="title">發生災害時想看的資訊</div>
+    <ImgListRow
+      :data="infoData"
+      :imgSrc="'info'"
+      :title="'top'"
+      parallelogram
+      iconBox
+    />
+
+    <div class="title">人物誌攻略</div>
+    <ImgListRow
+      :data="peopleData"
+      :imgSrc="'people'"
+      :title="'bottom'"
+      square
+    />
+
+    <div class="title">防災多媒體館</div>
+    <ListDrawer
+      :data="multimediaData"
+      contentMore
+    />
+
     <div class="sideMenu_footer">
       <div class="footer_title">
         <p>國家災害防救科技中心</p>
@@ -57,9 +42,15 @@
 
 <script>
 import { reactive, ref } from 'vue';
+import ListDrawer from '@components/home/ListDrawer.vue';
+import ImgListRow from '@components/home/ImgListRow.vue';
 
 export default {
   name: 'SideMenu',
+  components: {
+    ListDrawer,
+    ImgListRow
+  },
   setup () {
     const currentNumber = ref('01');
 
@@ -72,7 +63,7 @@ export default {
       { number: '06', title: '互動遊戲', content: '除了日常的物資外，還需要準備緊急避難包，當地震發生後的物資外，還需要準備緊急避難包，當地震發生後....' },
     ]);
 
-    const listTwoData = reactive([
+    const infoData = reactive([
       { title: '各類災害示警', data: [1, 2] },
       { title: '天氣資訊', data: [3, 4] },
       { title: '降雨資訊', data: [5] },
@@ -84,18 +75,50 @@ export default {
       { title: '停電通報查詢', data: [14] }
     ])
 
+    const peopleData = reactive([
+      { title: '高齡者', data: [1] },
+      { title: '幼童', data: [2] },
+      { title: '飼主', data: [3] },
+      { title: '男/女性', data: [4] },
+      { title: '身障者', data: [5] }
+    ])
+
+    const multimediaData = reactive([
+      { number: '01', title: '短片', content: [] },
+      { number: '02', title: '影劇', content: [] },
+      { number: '03', title: '動畫', content: [] },
+      { number: '04', title: '遊戲', content: [] },
+      { number: '05', title: '書籍', content: [] },
+      {
+        number: '06',
+        title: '場館體驗',
+        content: [
+          { name: '921地震教育園區', imgSrc: 'multimedia-1.png' },
+          { name: '車壟埔斷層保存園區', imgSrc: 'multimedia-2.png' },
+          { name: '莫拉克風災紀念館', imgSrc: 'multimedia-3.png' },
+          { name: '國立台灣科學校教育館', imgSrc: 'multimedia-1.png' },
+          { name: '桃園防災館', imgSrc: 'multimedia-2.png' },
+          { name: '特色防災校園遊學路線', imgSrc: 'multimedia-3.png' }
+        ]
+      },
+    ]);
+
     return {
       currentNumber,
       listData,
-      listTwoData
+      infoData,
+      peopleData,
+      multimediaData
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 .sideMenu {
+  @media (min-width: 992px) {
+    overflow-y: auto;
+  }
   width: 100%;
-  overflow-y: auto;
 
   .title {
     height: 117px;
@@ -105,87 +128,6 @@ export default {
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #008396;
-  }
-
-  ul {
-    list-style-type: none;
-    li {
-      padding: 1rem 3rem;
-      color: #50afbd;
-      cursor: pointer;
-      border-top: 2px solid #c2d9dc;
-      &:last-child {
-        border-bottom: 2px solid #c2d9dc;
-      }
-    }
-  }
-
-  .list_li {
-    display: flex;
-    &.active {
-      background: #50afbd;
-      color: white;
-      .list_number {
-        color: white;
-      }
-    }
-
-    .list_number {
-      color: #50afbd;
-      margin-right: 10px;
-      border-bottom: 1px solid;
-      height: 21px;
-    }
-
-    .list_title {
-      font-weight: bolder;
-      font-size: 15px;
-      letter-spacing: 0.08em;
-    }
-
-    .list_content {
-      font-size: 14px;
-      font-weight: 300;
-      opacity: 0;
-      margin-top: 0px;
-      height: 0;
-    }
-
-    .active {
-      opacity: 1;
-      margin-top: 20px;
-      transition: height 1s ease;
-      transition: margin-top 1s ease;
-      height: 100%;
-    }
-  }
-
-  .list_two {
-    padding: 0 5px;
-    .circle_row {
-      width: 170px;
-      height: 170px;
-      padding: 10px;
-    }
-
-    .white_circle {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      background: #ffffff;
-      box-shadow: 0px 8px 17px -2px rgba(0, 0, 0, 0.08);
-      border-radius: 24px 64px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .info_img {
-      width: 30%;
-      padding: 0 2px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09);
-      border-radius: 10px;
-    }
   }
 
   .sideMenu_footer {

@@ -253,7 +253,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* 清除預設 */
 html,
 body,

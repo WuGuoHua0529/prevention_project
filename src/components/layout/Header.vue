@@ -54,7 +54,6 @@
       />
       </Col>
     </Row>
-
   </div>
 </template>
 
@@ -78,7 +77,7 @@ export default {
 
     watch(() => store.getters.getHeaderHidden, (value) => {
       hiddenHeaderStates.value = value;
-    });
+    }, { immediate: true });
 
     const navData = reactive([
       {

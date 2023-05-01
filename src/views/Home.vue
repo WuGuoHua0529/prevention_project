@@ -49,7 +49,7 @@ export default {
     const store = useStore();
     const headerHidden = computed(() => store.getters.getHeaderHidden);
 
-    // store.dispatch('setHeaderHidden', true);
+    store.dispatch('setHeaderHidden', true);
 
     onMounted(() => {
       window.addEventListener('mousewheel', () => {

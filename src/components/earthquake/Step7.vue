@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .step7_container {
   margin: 300px auto 0 auto;
   width: 1100px;

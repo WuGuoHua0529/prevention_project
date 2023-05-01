@@ -121,7 +121,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /*字體載入*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
 

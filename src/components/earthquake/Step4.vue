@@ -177,7 +177,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* step4 */
 @keyframes movepoint {
   50% {

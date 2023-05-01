@@ -1,13 +1,35 @@
 <template>
-  <div class="accordion" :class="{ 'hover-container': startHoverStates , 'rwd-container-img': rwdWidth }">
-    <img class="accordion_img" :class="{ 'hover-container-img': startHoverStates , 'rwd-img': rwdWidth }" src="../assets/img/page-photo/inHome/Frame3.png" alt="">
-    <div v-if="startHoverStates" class="hover-content">
+  <div
+    class="accordion"
+    :class="{ 'hover-container': startHoverStates , 'rwd-container-img': rwdWidth }"
+  >
+    <img
+      class="accordion_img"
+      :class="{ 'hover-container-img': startHoverStates , 'rwd-img': rwdWidth }"
+      src="../assets/img/page-photo/inHome/Frame3.png"
+      alt=""
+    >
+    <div
+      v-if="startHoverStates"
+      class="hover-content"
+    >
       <div class="hover_text">{{ data }}</div>
     </div>
-    
-    <div v-else class="accordion_content"> 
-      <div class="accordion_text" :class="{ 'text': more, 'collapse': collapseStates }">{{ data }}</div>
-      <div v-if="more" class="Accordion_btn" :class="{ 'active': !collapseStates }" @click="changeState"></div>
+
+    <div
+      v-else
+      class="accordion_content"
+    >
+      <div
+        class="accordion_text"
+        :class="{ 'text': more, 'collapse': collapseStates }"
+      >{{ data }}</div>
+      <div
+        v-if="more"
+        class="Accordion_btn"
+        :class="{ 'active': !collapseStates }"
+        @click="changeState"
+      ></div>
     </div>
   </div>
 </template>
@@ -31,27 +53,27 @@ export default {
     //   default: ''
     // }
   },
-  setup() {
+  setup () {
     const startHoverStates = ref(false);
     //  但是只要頁面刷新，就不會觸發，需要改
-    
+
     const collapseStates = ref(true);
     // const rwdWidth = ref(false);
 
-    function changeState() {
+    function changeState () {
       collapseStates.value = !collapseStates.value;
     }
 
-     // 1.監聽尺寸大於ＸＸＸ
-     window.addEventListener('resize', function() {
+    // 1.監聽尺寸大於ＸＸＸ
+    window.addEventListener('resize', function () {
       console.log('ffff');
-      if (window.innerWidth >= 1024){
-      startHoverStates.value = true
-      }else{
+      if (window.innerWidth >= 1024) {
+        startHoverStates.value = true
+      } else {
 
-        startHoverStates.value = false 
+        startHoverStates.value = false
       }
-      
+
     });
 
     //  2.監聽尺寸大於ＸＸＸ
@@ -64,9 +86,9 @@ export default {
     //     rwdWidth.value = false 
     //     // 跑不出東西????
     //   }
-      
+
     // });
-    
+
     return {
       startHoverStates,
       collapseStates,
@@ -78,9 +100,8 @@ export default {
 }
 </script>
 
-<style>
-
-.rwd-container-img{
+<style scoped>
+.rwd-container-img {
   display: flex;
   align-items: center;
   position: relative;
@@ -90,7 +111,7 @@ export default {
   height: 190px;
 }
 
-.rwd-img{
+.rwd-img {
   width: 190px;
   height: 190px;
   margin: 0 15px;
@@ -116,37 +137,37 @@ export default {
 }
 
 .accordion_content {
-    position: absolute;
-    top: 133px;
-    display: flex;
-    flex-direction: column;
-    width: 154px;
-    padding-bottom: 10px;
-    background: #FFEEA3;
-    border-radius: 0 0 20px 20px;
+  position: absolute;
+  top: 133px;
+  display: flex;
+  flex-direction: column;
+  width: 154px;
+  padding-bottom: 10px;
+  background: #ffeea3;
+  border-radius: 0 0 20px 20px;
 }
 
 .accordion_text {
-    text-align: center;
-    padding: 10px 14px 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 18px;
-    letter-spacing: 0.06em;
-    color: #5E5E5E;
-  }
+  text-align: center;
+  padding: 10px 14px 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  color: #5e5e5e;
+}
 
 .Accordion_btn {
-    display: block;
-    margin: 5px auto;
-    color: #5E5E5E;
-    width: 6px;
-    height: 6px;
-    border-top: 1.3px solid;
-    border-right: 1.3px solid;
-    transform: rotate(135deg);
-    z-index: 2;
+  display: block;
+  margin: 5px auto;
+  color: #5e5e5e;
+  width: 6px;
+  height: 6px;
+  border-top: 1.3px solid;
+  border-right: 1.3px solid;
+  transform: rotate(135deg);
+  z-index: 2;
 }
 
 .collapse {
@@ -158,13 +179,13 @@ export default {
   -webkit-box-orient: vertical;
 }
 
-.text{
-  background-color:#FFEEA3;
+.text {
+  background-color: #ffeea3;
   border-radius: 0 0 20px 20px;
 }
 
-.active{
-  transform:rotate(-45deg);
+.active {
+  transform: rotate(-45deg);
 }
 
 /*超過1024 hover對話筐的css*/
@@ -176,16 +197,15 @@ export default {
   margin: 0px 10px;
   align-items: start;
 }
-.hover-container-img{
+.hover-container-img {
   width: 210px;
   height: 210px;
 }
-.hover-container:nth-child(5){
+.hover-container:nth-child(5) {
   margin-top: 140px;
   width: 76%;
 }
-.hover-container:hover .hover-content
- {
+.hover-container:hover .hover-content {
   display: block;
   position: absolute;
 }
@@ -196,16 +216,16 @@ export default {
   width: 225px;
   height: 65px;
 }
-.hover_text{
+.hover_text {
   padding: 20px 20px 20px 30px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 130%;
-    letter-spacing: 0.07em;
-    color: #5E5E5E;
-    text-align: left;
-    background: #FFEEA3;
-    border-radius: 0px 17px 17px 45px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 130%;
+  letter-spacing: 0.07em;
+  color: #5e5e5e;
+  text-align: left;
+  background: #ffeea3;
+  border-radius: 0px 17px 17px 45px;
 }
 </style>

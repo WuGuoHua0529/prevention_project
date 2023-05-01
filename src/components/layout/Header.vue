@@ -4,15 +4,19 @@
     :class="{ 'hidden': hiddenHeaderStates  }"
   >
     <div class="row">
-      <div class="title">
-        <img src="@assets/img/logo.png" />
-        一起來防災
-      </div>
-      <!-- <ul class="ul_header">
-        <li>每天一點防災知識</li>
-        <li>災害來臨需要的資訊</li>
-        <li>小遊戲</li>
-      </ul> -->
+      <router-link
+        v-slot="{ navigate }"
+        custom
+        :to="{ name: 'Home' }"
+      >
+        <div
+          class="title"
+          @click="navigate"
+        >
+          <img src="@assets/img/logo.png" />
+          一起來防災
+        </div>
+      </router-link>
       <div
         class="burger"
         @click="listOpenStates = !listOpenStates"
@@ -24,54 +28,51 @@
         <span></span>
       </div>
     </div>
-    <div
-      class="list"
-      :class="{ 'open': listOpenStates }"
-    >
-      <div class="row">
-        <ul>
-          <li class="title">為梅雨及颱風季節做好準備</li>
-          <li>災害可能發生的地方</li>
-          <li>防災可以這麼做</li>
-        </ul>
-        <ul>
-          <li class="title">為地震做好準備</li>
-          <li>災害可能發生的地方</li>
-          <li>防災可以這麼做</li>
-          <li>地震時怎麼保護自己</li>
-        </ul>
-        <ul>
-          <li class="title">人物誌攻略</li>
-          <li>災害可能發生的地方</li>
-          <li>防災可以這麼做</li>
-          <li>地震時怎麼保護自己</li>
-        </ul>
-        <ul>
-          <li class="title">各縣市防災專區</li>
-          <li>災害可能發生的地方</li>
-          <li>防災可以這麼做</li>
-          <li>地震時怎麼保護自己</li>
-        </ul>
-        <ul>
-          <li class="title">防災多媒體館</li>
-          <li>災害可能發生的地方</li>
-          <li>防災可以這麼做</li>
-          <li>地震時怎麼保護自己</li>
-        </ul>
-      </div>
-    </div>
+    <Row>
+      <Col
+        :xs="0"
+        :sm="0"
+        :md="24"
+        :lg="24"
+      >
+      <DesktopNav
+        :data="navData"
+        class="nav_row"
+        :class="{ 'open': listOpenStates }"
+      />
+      </Col>
+      <Col
+        :xs="24"
+        :sm="24"
+        :md="0"
+        :lg="0"
+      >
+      <PhoneNav
+        :data="navData"
+        class="nav_row"
+        :class="{ 'open': listOpenStates }"
+      />
+      </Col>
+    </Row>
+
   </div>
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { useStore } from 'vuex';
+import DesktopNav from '@components/layout/DesktopNav.vue';
+import PhoneNav from '@components/layout/PhoneNav.vue';
 
 export default {
   name: 'Header',
+  components: {
+    DesktopNav,
+    PhoneNav
+  },
   setup () {
     const listOpenStates = ref(false);
-    const hiddenHeaderStates = ref(false);
+    const hiddenHeaderStates = ref(true);
 
     const store = useStore();
 
@@ -79,9 +80,47 @@ export default {
       hiddenHeaderStates.value = value;
     });
 
+    const navData = reactive([
+      {
+        title: '為梅雨及颱風季節做好準備',
+        open: false,
+        data: [
+          { name: '災害可能發生的地方' },
+          { name: '防災可以這麼做' },
+        ]
+      },
+      {
+        title: '為地震做好準備',
+        open: false,
+        data: [
+          { name: '災害可能發生的地方', path: 'Disaster' },
+          { name: '防災可以這麼做', path: 'Earthquake' },
+          { name: '地震時怎麼保護自己', path: 'Protect' }
+        ]
+      },
+      {
+        title: '人物誌攻略',
+        open: false,
+        data: []
+      },
+      {
+        title: '災害來臨需要的資訊',
+        open: false,
+        data: []
+      },
+      {
+        title: '防災多媒體館',
+        open: false,
+        data: [
+          { name: '小遊戲' }
+        ]
+      },
+    ])
+
     return {
       listOpenStates,
-      hiddenHeaderStates
+      hiddenHeaderStates,
+      navData
     }
   }
 }
@@ -107,30 +146,20 @@ export default {
 
   .title {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
+    cursor: pointer;
     img {
       margin-right: 10px;
     }
   }
 }
 
-// .ul_header {
-//   height: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   list-style-type: none;
-//   font-weight: 500;
-//   font-size: 1rem;
-// }
-
-// .ul_header li {
-//   padding: 0 0.5rem;
-// }
-
 .burger {
-  width: 50px;
+  @media (min-width: 768px) {
+    width: 50px;
+  }
+  width: 30px;
   height: 100%;
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -203,43 +232,12 @@ export default {
   }
 }
 
-.list {
-  width: 100%;
+.nav_row {
   height: 0px;
-  transition: height 0.5s ease;
-  position: relative;
-  overflow: hidden;
   &.open {
-    height: 218px;
-  }
-
-  .row {
-    height: 100%;
-    padding: 60px 100px;
-    background: #bedee4;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  ul {
-    list-style-type: none;
-    li {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 0.5rem;
-      line-height: 23px;
-      letter-spacing: 0.05em;
-      color: #008396;
-      &:not(.title) {
-        cursor: pointer;
-      }
-    }
-
-    .title {
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 29px;
-      color: #008396;
+    height: 100vh;
+    @media (min-width: 768px) {
+      height: 268px;
     }
   }
 }

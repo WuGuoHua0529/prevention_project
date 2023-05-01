@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   height: 124px;
   padding: 124px 360px;

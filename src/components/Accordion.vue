@@ -54,7 +54,7 @@ export default {
     // }
   },
   setup () {
-    const startHoverStates = ref(false);
+    const startHoverStates = ref(true);
     //  但是只要頁面刷新，就不會觸發，需要改
 
     const collapseStates = ref(true);

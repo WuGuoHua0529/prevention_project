@@ -72,46 +72,36 @@
           @mouseleave="mouseleave10"
           class="step2_room_img10"
         ></div>
-        <span
-          class="img_tip_text img_text1_position"
-          id="imgTip1"
-        >窗戶加裝窗簾、防碎玻璃貼，避免玻璃碎裂飛濺</span>
-        <span
-          class="img_tip_text img_text2_position"
-          id="imgTip2"
-        >L型角鐵固定</span>
-        <span
-          class="img_tip_text img_text3_position"
-          id="imgTip3"
-        >餐具下鋪止滑墊</span>
-        <span
-          class="img_tip_text img_text4_position"
-          id="imgTip4"
-        >床邊準備包覆性拖鞋</span>
-        <span
-          class="img_tip_text img_text5_position"
-          id="imgTip5"
-        >使用防傾倒裝置</span>
-        <span
-          class="img_tip_text img_text6_position"
-          id="imgTip6"
-        >放置防倒板</span>
-        <span
-          class="img_tip_text img_text7_position"
-          id="imgTip7"
-        >固定家電用品</span>
-        <span
-          class="img_tip_text img_text8_position"
-          id="imgTip8"
-        >冰箱使用防傾倒裝置</span>
-        <span
-          class="img_tip_text img_text9_position"
-          id="imgTip9"
-        >放置住宅用滅火器</span>
-        <span
-          class="img_tip_text img_text10_position"
-          id="imgTip10"
-        >玻璃拉門貼上防護膜</span>
+        <span class="img_tip_text img_text1_position" id="imgTip1"
+          >窗戶加裝窗簾、防碎玻璃貼，避免玻璃碎裂飛濺</span
+        >
+        <span class="img_tip_text img_text2_position" id="imgTip2"
+          >L型角鐵固定</span
+        >
+        <span class="img_tip_text img_text3_position" id="imgTip3"
+          >餐具下鋪止滑墊</span
+        >
+        <span class="img_tip_text img_text4_position" id="imgTip4"
+          >床邊準備包覆性拖鞋</span
+        >
+        <span class="img_tip_text img_text5_position" id="imgTip5"
+          >使用防傾倒裝置</span
+        >
+        <span class="img_tip_text img_text6_position" id="imgTip6"
+          >放置防倒板</span
+        >
+        <span class="img_tip_text img_text7_position" id="imgTip7"
+          >固定家電用品</span
+        >
+        <span class="img_tip_text img_text8_position" id="imgTip8"
+          >冰箱使用防傾倒裝置</span
+        >
+        <span class="img_tip_text img_text9_position" id="imgTip9"
+          >放置住宅用滅火器</span
+        >
+        <span class="img_tip_text img_text10_position" id="imgTip10"
+          >玻璃拉門貼上防護膜</span
+        >
       </div>
     </div>
   </div>
@@ -120,7 +110,7 @@
 <script>
 export default {
   name: "Step2",
-  setup () {
+  setup() {
     const mouseenter1 = () => {
       document.querySelector("#imgTip1").style.display = "block";
     };
@@ -208,216 +198,209 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD
 <style scoped>
+=======
+<style lang="scss" scoped>
+>>>>>>> afc5dc2 (earthquake_0428)
 .step2_container {
   margin: 200px auto 0 auto;
   width: 700px;
   display: flex;
   justify-content: space-between;
+  .step2_number {
+    font-weight: 500;
+    font-size: 220px;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 4px #50afbd;
+    color: #ffffff;
+  }
+  .step2_info {
+    width: 480px;
+    .step2_title {
+      margin-top: 60px;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+      color: #50afbd;
+    }
+    .step2_text {
+      margin-top: 28px;
+      font-size: 16px;
+      line-height: 156%;
+      letter-spacing: 0.02em;
+      color: #5e5e5e;
+    }
+    .step2_tips {
+      position: relative;
+      width: 290px;
+      margin-top: 25px;
+      border-bottom: 1px solid #50afbd;
+      span {
+        margin-left: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        color: #50afbd;
+      }
+      ::before {
+        content: "";
+        width: 41px;
+        height: 41px;
+        background-image: url(@assets/img/earthquake/step2/tip_img.png);
+        position: absolute;
+        bottom: -10px;
+        left: -30px;
+      }
+    }
+  }
 }
-
-.step2_container .step2_number {
-  font-weight: 500;
-  font-size: 220px;
-  letter-spacing: 0.05em;
-  -webkit-text-stroke: 4px #50afbd;
-  color: #ffffff;
-}
-
-.step2_container .step2_info {
-  width: 480px;
-}
-
-.step2_container .step2_title {
-  margin-top: 60px;
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.05em;
-  color: #50afbd;
-}
-
-.step2_container .step2_text {
-  margin-top: 28px;
-  font-size: 16px;
-  line-height: 156%;
-  letter-spacing: 0.02em;
-  color: #5e5e5e;
-}
-
-.step2_container .step2_tips {
-  position: relative;
-  width: 290px;
-  margin-top: 25px;
-  border-bottom: 1px solid #50afbd;
-}
-
-.step2_container .step2_tips span {
-  margin-left: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.1em;
-  color: #50afbd;
-}
-
-.step2_container .step2_tips::before {
-  content: "";
-  width: 41px;
-  height: 41px;
-  background-image: url(@assets/img/earthquake/step2/easter-egg\ 1.png);
-  position: absolute;
-  bottom: -10px;
-  left: -30px;
-}
-
 .step2_img {
   width: 100%;
   height: 1500px;
   padding: 300px 0 0 0;
   background-size: 110%;
   background-repeat: no-repeat;
-  background-image: url(@assets/img/earthquake/step2/Vector11.png);
-}
+  background-image: url(@assets/img/earthquake/step2/step2_background.png);
+  .step2_room {
+    width: 45%;
+    height: 1200px;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(@assets/img/earthquake/step2/step2_room.png);
+    .step2_room_img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .step2_room_img1 {
+        position: absolute;
+        top: -160px;
+        left: 130px;
+      }
+      .step2_room_img2 {
+        position: absolute;
+        top: -160px;
+        left: 380px;
+      }
+      .step2_room_img3 {
+        position: absolute;
+        top: 40px;
+        left: 25px;
+      }
+      .step2_room_img4 {
+        position: absolute;
+        top: 75px;
+        left: 255px;
+      }
+      .step2_room_img5 {
+        position: absolute;
+        top: 48px;
+        left: 622px;
+      }
+      .step2_room_img6 {
+        position: absolute;
+        top: 134px;
+        left: 516px;
+      }
+      .step2_room_img7 {
+        position: absolute;
+        top: 365px;
+        left: 9px;
+      }
+      .step2_room_img8 {
+        position: absolute;
+        top: 863px;
+        left: 0px;
+      }
+      .step2_room_img9 {
+        position: absolute;
+        top: 872px;
+        left: 250px;
+      }
+      .step2_room_img10 {
+        width: 38%;
+        height: 8%;
+        position: absolute;
+        top: 976px;
+        left: 350px;
+        opacity: 0;
+        background-color: white;
+      }
+    }
+  }
 
-.step2_img .step2_room {
-  width: 45%;
-  height: 1200px;
-  margin: 0 auto;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: url(@assets/img/earthquake/step2/step2_room.png);
-}
+  .img_tip_text {
+    display: none;
+    padding: 32px;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: #faf8f6;
+    background-color: #50afbd;
+    border-radius: 64px 24px 24px 0px;
+  }
 
-.step2_img .step2_room_img {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+  .img_text1_position {
+    position: absolute;
+    top: -262px;
+    left: 191px;
+  }
 
-.step2_img .step2_room_img1 {
-  position: absolute;
-  top: -160px;
-  left: 130px;
-}
-.step2_img .step2_room_img2 {
-  position: absolute;
-  top: -160px;
-  left: 380px;
-}
-.step2_img .step2_room_img3 {
-  position: absolute;
-  top: 40px;
-  left: 25px;
-}
-.step2_img .step2_room_img4 {
-  position: absolute;
-  top: 75px;
-  left: 255px;
-}
-.step2_img .step2_room_img5 {
-  position: absolute;
-  top: 48px;
-  left: 622px;
-}
-.step2_img .step2_room_img6 {
-  position: absolute;
-  top: 134px;
-  left: 516px;
-}
-.step2_img .step2_room_img7 {
-  position: absolute;
-  top: 365px;
-  left: 9px;
-}
-.step2_img .step2_room_img8 {
-  position: absolute;
-  top: 863px;
-  left: 0px;
-}
-.step2_img .step2_room_img9 {
-  position: absolute;
-  top: 872px;
-  left: 250px;
-}
-.step2_img .step2_room_img10 {
-  width: 38%;
-  height: 8%;
-  position: absolute;
-  top: 976px;
-  left: 350px;
-  opacity: 0;
-  background-color: white;
-}
+  .img_text2_position {
+    position: absolute;
+    top: -202px;
+    left: 514px;
+  }
 
-.img_tip_text {
-  display: none;
-  padding: 32px;
-  font-size: 16px;
-  line-height: 156%;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  color: #faf8f6;
-  background-color: #50afbd;
-  border-radius: 64px 24px 24px 0px;
-}
+  .img_text3_position {
+    position: absolute;
+    top: 0;
+    left: 64px;
+  }
 
-.img_text1_position {
-  position: absolute;
-  top: -262px;
-  left: 191px;
-}
+  .img_text4_position {
+    position: absolute;
+    top: 14px;
+    left: 280px;
+  }
 
-.img_text2_position {
-  position: absolute;
-  top: -202px;
-  left: 514px;
-}
+  .img_text5_position {
+    position: absolute;
+    top: 75px;
+    left: 650px;
+  }
 
-.img_text3_position {
-  position: absolute;
-  top: 0;
-  left: 64px;
-}
+  .img_text6_position {
+    position: absolute;
+    top: 147px;
+    left: 534px;
+  }
 
-.img_text4_position {
-  position: absolute;
-  top: 14px;
-  left: 280px;
-}
+  .img_text7_position {
+    position: absolute;
+    top: 415px;
+    left: 45px;
+  }
 
-.img_text5_position {
-  position: absolute;
-  top: 75px;
-  left: 650px;
-}
+  .img_text8_position {
+    position: absolute;
+    top: 810px;
+    left: 13px;
+  }
 
-.img_text6_position {
-  position: absolute;
-  top: 147px;
-  left: 534px;
-}
+  .img_text9_position {
+    position: absolute;
+    top: 810px;
+    left: 278px;
+  }
 
-.img_text7_position {
-  position: absolute;
-  top: 415px;
-  left: 45px;
-}
-
-.img_text8_position {
-  position: absolute;
-  top: 810px;
-  left: 13px;
-}
-
-.img_text9_position {
-  position: absolute;
-  top: 810px;
-  left: 278px;
-}
-
-.img_text10_position {
-  position: absolute;
-  top: 950px;
-  left: 390px;
+  .img_text10_position {
+    position: absolute;
+    top: 950px;
+    left: 390px;
+  }
 }
 </style>

@@ -5,16 +5,18 @@
       <div class="container_info">
         除了日常的物資外，還需要準備緊急避難包，當地震發生後，建築物嚴重受損，就需要立即緊急撤離建築物，這時候緊急避難包就可以派上用場，立即取用前往避難場所。
       </div>
+      <img src="@assets/img/earthquake/container_button.png" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Container'
-}
+  name: "Container",
+};
 </script>
 
+<<<<<<< HEAD
 <style scoped>
 .container {
   height: 124px;
@@ -22,24 +24,68 @@ export default {
   background: #ffeea3;
   border-radius: 0px 0px 0px 248px;
 }
+=======
+<style lang="scss" scoped>
+@media screen and (min-width: 480px) {
+  .container {
+    padding: 93px 13vw;
+    background: #ffeea3;
+    border-radius: 0px 0px 0px 200px;
+>>>>>>> afc5dc2 (earthquake_0428)
 
-.container .container_center {
-  display: flex;
-  justify-content: space-between;
+    .container_center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .container_title {
+        font-weight: 700;
+        font-size: 64px;
+        color: #5e5e5e;
+      }
+
+      .container_info {
+        width: 550px;
+        font-family: "Gill Sans";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 38px;
+        color: #5e5e5e;
+      }
+      .container_button {
+        display: none;
+      }
+    }
+  }
 }
 
-.container .container_title {
-  font-weight: 700;
-  font-size: 64px;
-  color: #5e5e5e;
-}
+@media screen and (max-device-width: 480px) {
+  .container {
+    height: 126px;
+    padding: 17px 10%;
+    background: #ffeea3;
+    text-align: center;
+    .container_title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+      color: #5e5e5e;
+    }
+    .container_info {
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-top: 10px;
 
-.container .container_info {
-  width: 550px;
-  font-family: "Gill Sans";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 38px;
-  color: #5e5e5e;
+      /* Black */
+
+      color: #5e5e5e;
+    }
+    img {
+      margin-top: 12px;
+    }
+  }
 }
 </style>

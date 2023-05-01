@@ -5,12 +5,11 @@
   </div>
 
   <div class="step8_ex">
-    <div
-      class="step8_ex_img"
-      ref="imgBox"
-    >
+    <div class="step8_ex_img" ref="imgBox">
       <img
-        :src="require(`@assets/img/earthquake/step8/Group_step8_${imgNumber}.png`)"
+        :src="
+          require(`@assets/img/earthquake/step8/Group_step8_${imgNumber}.png`)
+        "
         alt=""
       />
     </div>
@@ -35,7 +34,7 @@
 import { reactive, ref } from "vue";
 export default {
   name: "Step8",
-  setup () {
+  setup() {
     const imgNumber = ref(0);
     const listNumber = ref(null);
     const listData = reactive([
@@ -100,29 +99,31 @@ export default {
 };
 </script>
 
+<<<<<<< HEAD
 <style scoped>
+=======
+<style lang="scss">
+>>>>>>> afc5dc2 (earthquake_0428)
 .step8_container {
   margin: 300px auto 0 auto;
   width: 1100px;
   display: flex;
-}
-
-.step8_container .step8_number {
-  margin-top: -100px;
-  font-weight: 500;
-  font-size: 220px;
-  letter-spacing: 0.05em;
-  -webkit-text-stroke: 4px #50afbd;
-  color: #ffffff;
-}
-
-.step8_container .step8_title {
-  margin-top: 100px;
-  margin-left: 70px;
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.05em;
-  color: #50afbd;
+  .step8_number {
+    margin-top: -100px;
+    font-weight: 500;
+    font-size: 220px;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 4px #50afbd;
+    color: #ffffff;
+  }
+  .step8_title {
+    margin-top: 100px;
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: #50afbd;
+  }
 }
 
 .step8_ex {
@@ -133,52 +134,46 @@ export default {
   align-items: start;
   margin-top: 100px;
   margin-bottom: 50px;
-}
+  .step8_ex_img {
+    position: sticky;
+    top: 30%;
+    left: 0;
+  }
+  .step8_ex_info {
+    width: 600px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        margin-bottom: 180px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .list_number {
+          color: #50afbd;
+          font-size: 24px;
+          line-height: 35px;
+        }
 
-.step8_ex .step8_ex_img {
-  position: sticky;
-  top: 30%;
-  left: 0;
-}
+        .list_title {
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 52px;
+          letter-spacing: 0.1em;
+          margin-top: 10px;
+        }
 
-.step8_ex .step8_ex_info {
-  width: 600px;
-}
-
-.step8_ex .step8_ex_info ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.step8_ex .step8_ex_info ul li {
-  margin-bottom: 180px;
-}
-
-.step8_ex .step8_ex_info ul li:last-child {
-  margin-bottom: 0;
-}
-
-.list_number {
-  color: #50afbd;
-  font-size: 24px;
-  line-height: 35px;
-}
-
-.list_title {
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 52px;
-  letter-spacing: 0.1em;
-  margin-top: 10px;
-}
-
-.list_content {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 35px;
-  letter-spacing: 0.1em;
-  margin-top: 10px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #50afbd;
+        .list_content {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 35px;
+          letter-spacing: 0.1em;
+          margin-top: 10px;
+          padding-bottom: 30px;
+          border-bottom: 1px solid #50afbd;
+        }
+      }
+    }
+  }
 }
 </style>

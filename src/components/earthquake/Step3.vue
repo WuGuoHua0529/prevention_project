@@ -7,195 +7,123 @@
         當發生大規模地震，出現停電、停水或瓦斯中斷的狀況，若住家安全且有儲備日用品，就能選擇在熟悉且較舒適的住家中避難。平時可以透過「循環儲糧法」，一邊消耗一邊購買日用品，就不用擔心購買不必要或出現過期的狀況。
       </div>
       <div class="step3_web">
-        <a href="https://world.aeon-ryukyu.jp/tc/magazine/1384/?magazine_color=life">循環儲糧法查看</a>
-        <img
-          src="@assets/img/earthquake/nextArrow.png"
-          alt=""
-        />
+        <a
+          href="https://world.aeon-ryukyu.jp/tc/magazine/1384/?magazine_color=life"
+          >循環儲糧法查看</a
+        >
+        <img src="@assets/img/earthquake/nextArrow.png" alt="" />
       </div>
     </div>
   </div>
   <div class="button_left">
-    <img
-      src="@assets/img/earthquake/step3/button_left.png"
-      alt=""
-    />
+    <img src="@assets/img/earthquake/step3/button_left.png" alt="" />
   </div>
   <div class="slider_over">
     <div class="step3_slidershow">
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/E3bsig_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/gas.png" />
           <span class="item_group_box1">卡式瓦斯爐、瓦斯罐</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/Group33.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/pot.png" alt="" />
           <span>鍋具</span>
         </div>
       </div>
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/zuF0JQ_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/water.png" alt="" />
           <span>礦泉水(三天份)</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/PntdtF_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/bucket.png" alt="" />
           <span>儲水桶</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/Tb62st_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/tissue1.png" alt="" />
           <span>濕紙巾</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/_x33_ScKNT_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/tissue2.png" alt="" />
           <span class="item_group_box2">廁所便利包</span>
         </div>
       </div>
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/XSWqzJ_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/light1.png" alt="" />
           <span>露營燈</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/JaHQae_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step4/light2.png" alt="" />
           <span>手電筒</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/QqiU9L_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/light3.png" alt="" />
           <span>提燈</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/Ne45hm_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/radio.png" alt="" />
           <span>收音機</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/KObYxk_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/dynamo.png" alt="" />
           <span>發電機</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/LWWlL8_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/warmbag.png" alt="" />
           <span>暖暖包</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/JxXq3t_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/bottle.png" alt="" />
           <span class="item_group_box3">保溫瓶</span>
         </div>
       </div>
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/SesU0D_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/dryrice.png" alt="" />
           <span>乾燥飯包</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/wagHgc_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/drynoddle.png" alt="" />
           <span>乾燥麵條包</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/aRBbmn_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/cookies.png" alt="" />
           <span>罐頭、泡麵、餅乾</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/_x36_Up8Jw_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/juice.png" alt="" />
           <span class="item_group_box4">果汁</span>
         </div>
       </div>
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/drup.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/drup.png" alt="" />
           <span>急救包、口罩、酒精</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/_x34_3nlcX_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step4/drug1.png" alt="" />
           <span>常備藥</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/PfE7G6_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/supplies.png" alt="" />
           <span class="item_group_box5">生理用品</span>
         </div>
       </div>
       <div class="item_group">
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/rQBfK0_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/defense.png" alt="" />
           <span>防身用品</span>
         </div>
         <div class="item_group_item">
-          <img
-            src="@assets/img/earthquake/step3/_x31_6lElA_2_.png"
-            alt=""
-          />
+          <img src="@assets/img/earthquake/step3/car.png" alt="" />
           <span class="item_group_box6">搬運推車</span>
         </div>
       </div>
     </div>
   </div>
   <div class="button_right">
-    <img
-      src="@assets/img/earthquake/step3/button_right.png"
-      alt=""
-    />
+    <img src="@assets/img/earthquake/step3/button_right.png" alt="" />
   </div>
 </template>
 

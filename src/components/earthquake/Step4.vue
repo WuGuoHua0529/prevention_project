@@ -21,16 +21,31 @@
         src="@assets/img/earthquake/step4/cookies2.png"
       />
       <p class="cookies_text">體積小熱量高的巧克餅、餅乾</p>
-      <img class="water1 move2" src="@assets/img/earthquake/step4/water1.png" />
-      <img class="water2 move4" src="@assets/img/earthquake/step4/water2.png" />
+      <img
+        class="water1 move2"
+        src="@assets/img/earthquake/step4/water1.png"
+      />
+      <img
+        class="water2 move4"
+        src="@assets/img/earthquake/step4/water2.png"
+      />
       <p class="water_text">飲用水</p>
     </div>
     <div class="circle_2">
       <p class="circle_title">人生安全</p>
-      <img class="phone move1" src="@assets/img/earthquake/step4/phone.png" />
+      <img
+        class="phone move1"
+        src="@assets/img/earthquake/step4/phone.png"
+      />
       <p class="phone_text">手機</p>
-      <img class="light1 move3" src="@assets/img/earthquake/step4/light1.png" />
-      <img class="light2 move2" src="@assets/img/earthquake/step4/light2.png" />
+      <img
+        class="light1 move3"
+        src="@assets/img/earthquake/step4/light1.png"
+      />
+      <img
+        class="light2 move2"
+        src="@assets/img/earthquake/step4/light2.png"
+      />
       <p class="light_text">掛頸燈、頭燈、手電筒</p>
       <img
         class="battery move4"
@@ -42,31 +57,67 @@
         src="@assets/img/earthquake/step4/whistle.png"
       />
       <p class="whistle_text">哨子</p>
-      <img class="drug1 move4" src="@assets/img/earthquake/step4/drug1.png" />
-      <img class="drug2 move2" src="@assets/img/earthquake/step4/drug2.png" />
+      <img
+        class="drug1 move4"
+        src="@assets/img/earthquake/step4/drug1.png"
+      />
+      <img
+        class="drug2 move2"
+        src="@assets/img/earthquake/step4/drug2.png"
+      />
       <p class="drug_text">隨身急救包、藥物</p>
-      <img class="gear1 move1" src="@assets/img/earthquake/step4/gear1.png" />
-      <img class="gear2 move3" src="@assets/img/earthquake/step4/gear2.png" />
+      <img
+        class="gear1 move1"
+        src="@assets/img/earthquake/step4/gear1.png"
+      />
+      <img
+        class="gear2 move3"
+        src="@assets/img/earthquake/step4/gear2.png"
+      />
       <p class="gear_text">雨具</p>
     </div>
     <div class="circle_3">
       <p class="circle_title">資訊蒐集</p>
-      <img class="map move2" src="@assets/img/earthquake/step4/map.png" />
+      <img
+        class="map move2"
+        src="@assets/img/earthquake/step4/map.png"
+      />
       <p class="map_text">避難地圖</p>
-      <img class="photo move4" src="@assets/img/earthquake/step4/photo.png" />
+      <img
+        class="photo move4"
+        src="@assets/img/earthquake/step4/photo.png"
+      />
       <p class="photo_text">家人照片</p>
-      <img class="pen move1" src="@assets/img/earthquake/step4/pen.png" />
+      <img
+        class="pen move1"
+        src="@assets/img/earthquake/step4/pen.png"
+      />
       <p class="pen_text">書寫工具(紙、筆)</p>
     </div>
     <div class="circle_4">
       <p class="circle_title">衛生清潔</p>
-      <img class="cloth1 move3" src="@assets/img/earthquake/step4/cloth1.png" />
-      <img class="cloth2 move1" src="@assets/img/earthquake/step4/cloth2.png" />
-      <img class="cloth3 move2" src="@assets/img/earthquake/step4/cloth3.png" />
+      <img
+        class="cloth1 move3"
+        src="@assets/img/earthquake/step4/cloth1.png"
+      />
+      <img
+        class="cloth2 move1"
+        src="@assets/img/earthquake/step4/cloth2.png"
+      />
+      <img
+        class="cloth3 move2"
+        src="@assets/img/earthquake/step4/cloth3.png"
+      />
       <p class="cloth_text">換穿衣物</p>
-      <img class="brush move4" src="@assets/img/earthquake/step4/brush.png" />
+      <img
+        class="brush move4"
+        src="@assets/img/earthquake/step4/brush.png"
+      />
       <p class="brush_text">牙刷組</p>
-      <img class="bag move2" src="@assets/img/earthquake/step4/bag.png" />
+      <img
+        class="bag move2"
+        src="@assets/img/earthquake/step4/bag.png"
+      />
       <p class="bag_text">塑膠袋</p>
       <img
         class="alcohol move4"
@@ -76,11 +127,20 @@
     </div>
     <div class="circle_5">
       <p class="circle_title">貴重物品</p>
-      <img class="cash move1" src="@assets/img/earthquake/step4/cash.png" />
+      <img
+        class="cash move1"
+        src="@assets/img/earthquake/step4/cash.png"
+      />
       <p class="cash_text">現金(震後可能停止電子交易)</p>
-      <img class="key move3" src="@assets/img/earthquake/step4/key.png" />
+      <img
+        class="key move3"
+        src="@assets/img/earthquake/step4/key.png"
+      />
       <p class="key_text">鑰匙</p>
-      <img class="card move2" src="@assets/img/earthquake/step4/card.png" />
+      <img
+        class="card move2"
+        src="@assets/img/earthquake/step4/card.png"
+      />
       <p class="card_text">重要證件(身分證、健保卡)</p>
     </div>
   </div>
@@ -92,11 +152,7 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-=======
 <style lang="scss" scoped>
->>>>>>> afc5dc2 (earthquake_0428)
 /* step4 */
 @keyframes movepoint {
   50% {

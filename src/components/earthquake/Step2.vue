@@ -72,36 +72,46 @@
           @mouseleave="mouseleave10"
           class="step2_room_img10"
         ></div>
-        <span class="img_tip_text img_text1_position" id="imgTip1"
-          >窗戶加裝窗簾、防碎玻璃貼，避免玻璃碎裂飛濺</span
-        >
-        <span class="img_tip_text img_text2_position" id="imgTip2"
-          >L型角鐵固定</span
-        >
-        <span class="img_tip_text img_text3_position" id="imgTip3"
-          >餐具下鋪止滑墊</span
-        >
-        <span class="img_tip_text img_text4_position" id="imgTip4"
-          >床邊準備包覆性拖鞋</span
-        >
-        <span class="img_tip_text img_text5_position" id="imgTip5"
-          >使用防傾倒裝置</span
-        >
-        <span class="img_tip_text img_text6_position" id="imgTip6"
-          >放置防倒板</span
-        >
-        <span class="img_tip_text img_text7_position" id="imgTip7"
-          >固定家電用品</span
-        >
-        <span class="img_tip_text img_text8_position" id="imgTip8"
-          >冰箱使用防傾倒裝置</span
-        >
-        <span class="img_tip_text img_text9_position" id="imgTip9"
-          >放置住宅用滅火器</span
-        >
-        <span class="img_tip_text img_text10_position" id="imgTip10"
-          >玻璃拉門貼上防護膜</span
-        >
+        <span
+          class="img_tip_text img_text1_position"
+          id="imgTip1"
+        >窗戶加裝窗簾、防碎玻璃貼，避免玻璃碎裂飛濺</span>
+        <span
+          class="img_tip_text img_text2_position"
+          id="imgTip2"
+        >L型角鐵固定</span>
+        <span
+          class="img_tip_text img_text3_position"
+          id="imgTip3"
+        >餐具下鋪止滑墊</span>
+        <span
+          class="img_tip_text img_text4_position"
+          id="imgTip4"
+        >床邊準備包覆性拖鞋</span>
+        <span
+          class="img_tip_text img_text5_position"
+          id="imgTip5"
+        >使用防傾倒裝置</span>
+        <span
+          class="img_tip_text img_text6_position"
+          id="imgTip6"
+        >放置防倒板</span>
+        <span
+          class="img_tip_text img_text7_position"
+          id="imgTip7"
+        >固定家電用品</span>
+        <span
+          class="img_tip_text img_text8_position"
+          id="imgTip8"
+        >冰箱使用防傾倒裝置</span>
+        <span
+          class="img_tip_text img_text9_position"
+          id="imgTip9"
+        >放置住宅用滅火器</span>
+        <span
+          class="img_tip_text img_text10_position"
+          id="imgTip10"
+        >玻璃拉門貼上防護膜</span>
       </div>
     </div>
   </div>
@@ -110,7 +120,7 @@
 <script>
 export default {
   name: "Step2",
-  setup() {
+  setup () {
     const mouseenter1 = () => {
       document.querySelector("#imgTip1").style.display = "block";
     };
@@ -198,11 +208,7 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-=======
 <style lang="scss" scoped>
->>>>>>> afc5dc2 (earthquake_0428)
 .step2_container {
   margin: 200px auto 0 auto;
   width: 700px;

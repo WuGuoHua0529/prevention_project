@@ -19,23 +19,6 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.step6_container {
-  margin: 400px auto 0 auto;
-  width: 1100px;
-  display: flex;
-}
-
-.step6_container .step6_img img {
-  width: 700px;
-}
-
-.step6_container .step6_info {
-  width: 420px;
-  margin-left: 100px;
-  margin-top: 50px;
-=======
 <style lang="scss" scoped>
 @media screen and (min-width: 480px) {
   .step6_container {
@@ -74,7 +57,6 @@ export default {
       }
     }
   }
->>>>>>> afc5dc2 (earthquake_0428)
 }
 @media screen and (max-device-width: 480px) {
   .step6_container {

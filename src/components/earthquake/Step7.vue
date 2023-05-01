@@ -19,35 +19,6 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.step7_container {
-  margin: 300px auto 0 auto;
-  width: 1100px;
-  display: flex;
-}
-
-.step7_container .step7_img {
-  margin-left: 200px;
-}
-
-.step7_container .step7_img img {
-  width: 450px;
-}
-
-.step7_container .step7_info {
-  width: 420px;
-  margin-left: 50px;
-}
-
-.step7_container .step7_number {
-  margin-top: -100px;
-  font-weight: 500;
-  font-size: 220px;
-  letter-spacing: 0.05em;
-  -webkit-text-stroke: 4px #50afbd;
-  color: #ffffff;
-=======
 <style lang="scss" scoped>
 @media screen and (min-width: 480px) {
   .step7_container {
@@ -87,7 +58,6 @@ export default {
       }
     }
   }
->>>>>>> afc5dc2 (earthquake_0428)
 }
 @media screen and (max-device-width: 480px) {
   .step7_container {

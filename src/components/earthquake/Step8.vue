@@ -5,7 +5,10 @@
   </div>
 
   <div class="step8_ex">
-    <div class="step8_ex_img" ref="imgBox">
+    <div
+      class="step8_ex_img"
+      ref="imgBox"
+    >
       <img
         :src="
           require(`@assets/img/earthquake/step8/Group_step8_${imgNumber}.png`)
@@ -34,7 +37,7 @@
 import { reactive, ref } from "vue";
 export default {
   name: "Step8",
-  setup() {
+  setup () {
     const imgNumber = ref(0);
     const listNumber = ref(null);
     const listData = reactive([
@@ -99,11 +102,7 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-=======
 <style lang="scss">
->>>>>>> afc5dc2 (earthquake_0428)
 .step8_container {
   margin: 300px auto 0 auto;
   width: 1100px;

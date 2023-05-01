@@ -16,22 +16,12 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.container {
-  height: 124px;
-  padding: 124px 360px;
-  background: #ffeea3;
-  border-radius: 0px 0px 0px 248px;
-}
-=======
 <style lang="scss" scoped>
 @media screen and (min-width: 480px) {
   .container {
     padding: 93px 13vw;
     background: #ffeea3;
     border-radius: 0px 0px 0px 200px;
->>>>>>> afc5dc2 (earthquake_0428)
 
     .container_center {
       display: flex;

@@ -41,16 +41,6 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.step_title {
-  font-weight: 700;
-  font-size: 78px;
-  letter-spacing: 0.05em;
-  color: #5e5e5e;
-  text-align: center;
-  margin-top: 150px;
-=======
 <style lang="scss" scoped>
 @media screen and (min-width: 480px) {
   .step_title {
@@ -74,6 +64,5 @@ export default {
     text-align: center;
     background-color: #dcebed;
   }
->>>>>>> afc5dc2 (earthquake_0428)
 }
 </style>

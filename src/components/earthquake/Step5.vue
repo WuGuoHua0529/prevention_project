@@ -8,15 +8,19 @@
         另外，也可利用消防e點通APP，進入親友協尋功能，即可使用災區親友現況查詢平台。
       </div>
       <div class="step5_tip">
-        <a href="https://portal2.emic.gov.tw/FIS2_Develop/Masses"
-          >災區親友現況查詢平台</a
-        >
+        <a href="https://portal2.emic.gov.tw/FIS2_Develop/Masses">災區親友現況查詢平台</a>
         <img src="@assets/img/earthquake/nextArrow.png" />
       </div>
     </div>
     <div class="step5_img">
-      <img class="img_top" src="@assets/img/earthquake/step5/step5_img1.png" />
-      <img class="img_left" src="@assets/img/earthquake/step5/step5_img2.png" />
+      <img
+        class="img_top"
+        src="@assets/img/earthquake/step5/step5_img1.png"
+      />
+      <img
+        class="img_left"
+        src="@assets/img/earthquake/step5/step5_img2.png"
+      />
       <img
         class="img_right"
         src="@assets/img/earthquake/step5/step5_img3.png"
@@ -35,22 +39,6 @@ export default {
 };
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.step5_container {
-  margin: 0 auto;
-  width: 1100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.step5_container .step5_number {
-  font-weight: 500;
-  font-size: 220px;
-  letter-spacing: 0.05em;
-  -webkit-text-stroke: 4px #50afbd;
-  color: #ffffff;
-=======
 <style lang="scss" scoped>
 @media screen and (min-width: 480px) {
   .step5_container {
@@ -140,7 +128,6 @@ export default {
       }
     }
   }
->>>>>>> afc5dc2 (earthquake_0428)
 }
 @media screen and (max-device-width: 480px) {
   .step5_container {

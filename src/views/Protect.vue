@@ -1,48 +1,6 @@
 <template>
   <div>
-    <div class="header">
-      <div class="header-container">
-        <div class="logo-title">
-          <a href="#">一般民眾災害管理策略</a>
-        </div>
-        <ul class="menu">
-          <li class="menu1">
-            <a
-              href="#"
-              target="_blank"
-            >
-              每天一點防災知識
-            </a>
-          </li>
-          <li class="menu2">
-            <a
-              href="#"
-              target="_blank"
-            >
-              發生災害時想看的資訊
-            </a>
-          </li>
-          <li class="menu3">
-            <a
-              href="#"
-              target="_blank"
-            >
-              互動遊戲
-            </a>
-          </li>
-          <a href="#">
-            <div class="menu4">
-              <div class="menu4-1"></div>
-              <div class="menu4-2"></div>
-            </div>
-          </a>
-        </ul>
-      </div>
-    </div>
-    <div class="banner">
-      <h1 class="banner-text">地震時怎麼保護自己</h1>
-    </div>
-
+    
     <div class="bar-container">
       <ul class="bar">
         <li class="bar1">
@@ -71,17 +29,17 @@
         <div class="content-house-text">1.在家中</div>
         <div class="content-house-img">
           <!-- ../assets/img/page-photo/inHome/Frame1.png -->
-          <Accordion :data="'保護好頭部、等待地震停止。'" />
+          <Accordion :data="'保護好頭部、等待地震停止。'" :imgSrc="'inhome/inhome_1.png'"/>
           <!-- ../assets/img/page-photo/inHome/Frame2.png -->
           <Accordion
-            :data="'避開冰箱、櫥櫃等易碎品，若可以即隨手關火，若遠離火源就等地震停止後再關閉爐火。'"
+            :data="'避開冰箱、櫥櫃等易碎品，若可以即隨手關火，若遠離火源就等地震停止後再關閉爐火。'" :imgSrc="'inhome/inhome_2.png'"
             more
           />
           <!-- ../assets/img/page-photo/inHome/Frame3.png -->
-          <Accordion :data="'可用棉被或枕頭保護自己的頭頸部及身體。'" />
+          <Accordion :data="'可用棉被或枕頭保護自己的頭頸部及身體。'" :imgSrc="'inhome/inhome_3.png'"/>
           <!-- ../assets/img/page-photo/inHome/Frame4.png -->
           <Accordion
-            :data="'地板容易濕滑，不要慌忙離開，以就地保護頭頸部為原則。'"
+            :data="'地板容易濕滑，不要慌忙離開，以就地保護頭頸部為原則。'" :imgSrc="'inhome/inhome_4.png'"
             more
           />
           <div class="house5"></div>
@@ -97,27 +55,27 @@
         <div class="content-area-img">
           <!-- ../assets/img/page-photo/在公共空間/Frame1.png -->
           <Accordion
-            :data="'遠離窗戶玻璃、儲物櫃、影印機，可躲在堅固的桌子底下保護自己，並且不要使用電梯。'"
+            :data="'遠離窗戶玻璃、儲物櫃、影印機，可躲在堅固的桌子底下保護自己，並且不要使用電梯。'" :imgSrc="'inpublic/inpublic_1.png'"
             more
           />
           <!-- ../assets/img/page-photo/在公共空間/Frame2.png -->
           <Accordion
-            :data="'用隨身攜帶的包包放在頭頂保護頭部，避免掉落物砸傷。'"
+            :data="'用隨身攜帶的包包放在頭頂保護頭部，避免掉落物砸傷。'" :imgSrc="'inpublic/inpublic_2.png'"
             more
           />
           <!-- ../assets/img/page-photo/在公共空間/Frame3.png -->
           <Accordion
-            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'"
+            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'" :imgSrc="'inpublic/inpublic_3.png'"
             more
           />
           <!-- ../assets/img/page-photo/在公共空間/Frame4.png -->
           <Accordion
-            :data="'遠離容易傾倒的展示架、玻璃製品，用包包保護頭部。聽從工作人員的指示，不要搭乘電梯避難。'"
+            :data="'遠離容易傾倒的展示架、玻璃製品，用包包保護頭部。聽從工作人員的指示，不要搭乘電梯避難。'" :imgSrc="'inpublic/inpublic_4.png'"
             more
           />
           <!-- ../assets/img/page-photo/在公共空間/Frame5.png -->
           <Accordion
-            :data="'躲在座位之間，用背部保護頭部，等待地震平息。即使停電，緊急出口指示燈也會亮起，不要慌張。。'"
+            :data="'躲在座位之間，用背部保護頭部，等待地震平息。即使停電，緊急出口指示燈也會亮起，不要慌張。'" :imgSrc="'inpublic/inpublic_5.png'" 
             more
           />
           <div class="area6"></div>
@@ -136,12 +94,12 @@
         <div class="content-car-img">
           <!-- ../assets/img/page-photo/在開車/Frame1.png -->
           <Accordion
-            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'"
+            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'" :imgSrc="'incar/incar_1.png'"
             more
           />
           <!-- ../assets/img/page-photo/在開車/Frame2.png -->
           <Accordion
-            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'"
+            :data="'按下各樓層按鈕和緊急開關，設法走出電梯。如果被困，使用緊急對講機與外界聯繫。'" :imgSrc="'incar/incar_2.png'"
             more
           />
           <div class="car3"></div>
@@ -159,17 +117,17 @@
         <div class="content-outside-img">
           <!-- ../assets/img/page-photo/在戶外/Frame1.png -->
           <Accordion
-            :data="'市中心有較多的玻璃窗及招牌等掉落物，請保護好頭部，可前往大型公園避難。'"
+            :data="'市中心有較多的玻璃窗及招牌等掉落物，請保護好頭部，可前往大型公園避難。'" :imgSrc="'outside/outside_1.png'"
             more
           />
           <!-- ../assets/img/page-photo/在戶外/Frame2.png -->
           <Accordion
-            :data="'小心落石，遠離陡坡，因為鬆動的土石可能會崩落。'"
+            :data="'小心落石，遠離陡坡，因為鬆動的土石可能會崩落。'" :imgSrc="'outside/outside_2.png'"
             more
           />
           <!-- ../assets/img/page-photo/在戶外/Frame3.png -->
           <Accordion
-            :data="'如果在海邊感受到強烈地震，無需等待疏散指示和建議，即可離開前往安全的高處。'"
+            :data="'如果在海邊感受到強烈地震，無需等待疏散指示和建議，即可離開前往安全的高處。'" :imgSrc="'outside/outside_3.png'"
             more
           />
           <div class="outside4"></div>
@@ -186,17 +144,17 @@
         <div class="content-publictransportation-img">
           <!-- ../assets/img/page-photo/在大眾交通工具/Frame1.png -->
           <Accordion
-            :data="'留意司機可能會突然剎車，請牢握把手、身體重心降低以免受傷。'"
+            :data="'留意司機可能會突然剎車，請牢握把手、身體重心降低以免受傷。'" :imgSrc="'inpublictransportation/inpublictransportation_1.png'"
             more
           />
           <!-- ../assets/img/page-photo/在大眾交通工具/Frame2.png -->
           <Accordion
-            :data="'捷運行駛速度為每小時30至80公里，如果坐在座位上，請保持低位並用包包保護頭部。如果您站立，請牢牢握住扶手以防止跌倒。鐵軌旁安裝了高壓電力線，擅自跳上鐵軌是極其危險的。'"
+            :data="'捷運行駛速度為每小時30至80公里，如果坐在座位上，請保持低位並用包包保護頭部。如果您站立，請牢牢握住扶手以防止跌倒。鐵軌旁安裝了高壓電力線，擅自跳上鐵軌是極其危險的。'" :imgSrc="'inpublictransportation/inpublictransportation_2.png'"
             more
           />
           <!-- ../assets/img/page-photo/在大眾交通工具/Frame3.png -->
           <Accordion
-            :data="'感受到強烈震動後，列車會緊急停車，停車後請遵從站務人員的指示。'"
+            :data="'感受到強烈震動後，列車會緊急停車，停車後請遵從站務人員的指示。'" :imgSrc="'inpublictransportation/inpublictransportation_3.png'"
             more
           />
           <div class="publictransportation4"></div>
@@ -405,99 +363,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  /* ----------HEADER------------ */
-  .header {
-    width: 100%;
-    height: 120px;
-    background-color: #50afbd;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .logo-title {
-    display: flex;
-    height: 120px;
-    padding-left: 70px;
-    font-style: normal;
-    font-size: 1.05rem;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .logo-title a {
-    color: #faf8f6;
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    padding-right: 90px;
-    padding-left: 0;
-    line-height: 29px;
-  }
-
-  .menu a {
-    letter-spacing: 0.05em;
-    color: #faf8f6;
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-
-  .menu1,
-  .menu2 {
-    margin-right: 30px;
-  }
-
-  .menu3 {
-    margin-right: 45px;
-  }
-
-  .menu4 {
-    display: flex;
-    flex-direction: column;
-    width: 35px;
-    height: 15px;
-    margin-top: 3.5px;
-  }
-
-  .menu4-1 {
-    height: 3px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  .menu4-2 {
-    height: 3px;
-    margin-top: 10px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  /* ------BANNER------ */
-
-  .banner {
-    display: flex;
-    width: 100%;
-    height: 120px;
-    background: #ffeea3;
-    border-radius: 0px 0px 0px 248px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-text {
-    font-weight: 700;
-    font-size: 1.7rem;
-    line-height: 93px;
-    letter-spacing: 0.05em;
-    color: #5e5e5e;
-  }
-
   .bar {
     padding-top: 70px;
     display: flex;
@@ -535,7 +400,6 @@ body {
   .bar a {
     color: #5e5e5e;
   }
-
   /* ----------CONTENT----------- */
 
   /* inHome */
@@ -786,99 +650,6 @@ body {
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
-  /* ----------HEADER------------ */
-  .header {
-    width: 100%;
-    height: 100px;
-    background-color: #50afbd;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .logo-title {
-    display: flex;
-    height: 100px;
-    padding-left: 40px;
-    font-style: normal;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .logo-title a {
-    color: #faf8f6;
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    padding-right: 40px;
-    padding-left: 0;
-    line-height: 29px;
-  }
-
-  .menu a {
-    letter-spacing: 0.05em;
-    color: #faf8f6;
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-
-  .menu1,
-  .menu2 {
-    margin-right: 30px;
-  }
-
-  .menu3 {
-    margin-right: 45px;
-  }
-
-  .menu4 {
-    display: flex;
-    flex-direction: column;
-    width: 30px;
-    height: 15px;
-    margin-top: 3.5px;
-  }
-
-  .menu4-1 {
-    height: 3px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  .menu4-2 {
-    height: 3px;
-    margin-top: 10px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  /* ------BANNER------ */
-
-  .banner {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background: #ffeea3;
-    border-radius: 0px 0px 0px 248px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-text {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 100px;
-    letter-spacing: 0.05em;
-    color: #5e5e5e;
-  }
-
   .bar {
     padding-top: 55px;
     display: flex;
@@ -916,9 +687,6 @@ body {
   .bar a {
     color: #5e5e5e;
   }
-
-  /* ---------------------------------- */
-
   /* inHome */
 
   .content-house {
@@ -1089,100 +857,6 @@ body {
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  /* ----------HEADER------------ */
-  .header {
-    width: 100%;
-    height: 80px;
-    background-color: #50afbd;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .logo-title {
-    display: flex;
-    height: 80px;
-    padding-left: 30px;
-    font-style: normal;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .logo-title a {
-    color: #faf8f6;
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-    padding-left: 0;
-    line-height: 29px;
-  }
-
-  .menu a {
-    letter-spacing: 0.05em;
-    color: #faf8f6;
-    font-weight: 400;
-    font-size: 0.4rem;
-  }
-
-  .menu1,
-  .menu2 {
-    display: none;
-    margin-right: 20px;
-  }
-
-  .menu3 {
-    display: none;
-    margin-right: 30px;
-  }
-
-  .menu4 {
-    display: flex;
-    flex-direction: column;
-    width: 20px;
-    height: 15px;
-    margin-top: 7px;
-  }
-
-  .menu4-1 {
-    height: 2px;
-    background-color: #faf8f6;
-    border-radius: 0.5px;
-  }
-
-  .menu4-2 {
-    height: 2px;
-    margin-top: 8px;
-    background-color: #faf8f6;
-    border-radius: 0.5px;
-  }
-
-  /* ------BANNER------ */
-
-  .banner {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    background: #ffeea3;
-    border-radius: 0px 0px 0px 248px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-text {
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-    color: #5e5e5e;
-  }
-
   .bar {
     padding-top: 55px;
     display: flex;
@@ -1220,7 +894,6 @@ body {
   .bar a {
     color: #5e5e5e;
   }
-
   /* ----------CONTENT----------- */
 
   /* inHome */
@@ -1419,118 +1092,31 @@ body {
 }
 
 @media screen and (max-device-width: 480px) {
-  /* ----------HEADER------------ */
+ /* 選單 */
 
-  .header {
-    width: 100%;
-    height: 76px;
-    background-color: #50afbd;
-  }
+ .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eaf9fb;
+  height: 42px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 17px;
+  padding: 0 20px;
+}
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
+.bar1,
+.bar2,
+.bar3,
+.bar4,
+.bar5 {
+  display: flex;
+}
 
-  .logo-title {
-    display: flex;
-    height: 76px;
-    padding-left: 20px;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    justify-content: center;
-    align-items: end;
-  }
-
-  .logo-title a {
-    color: #faf8f6;
-    padding-bottom: 17px;
-  }
-
-  .menu {
-    display: flex;
-    align-items: end;
-    padding-right: 20px;
-
-    line-height: 29px;
-  }
-
-  .menu1,
-  .menu2,
-  .menu3 {
-    display: none;
-  }
-
-  .menu4 {
-    display: flex;
-    flex-direction: column;
-    width: 22px;
-    height: 15px;
-    margin-top: 3.5px;
-    padding-bottom: 15px;
-  }
-
-  .menu4-1 {
-    height: 2px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  .menu4-2 {
-    height: 2px;
-    margin-top: 7px;
-    background-color: #faf8f6;
-    border-radius: 1.5px;
-  }
-
-  /* ------BANNER------ */
-
-  .banner {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    background: #ffeea3;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner-text {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-    color: #5e5e5e;
-  }
-
-  /* 選單 */
-
-  .bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eaf9fb;
-    height: 42px;
-    font-size: 10px;
-    font-weight: 300;
-    line-height: 17px;
-    padding: 0 20px;
-  }
-
-  .bar1,
-  .bar2,
-  .bar3,
-  .bar4,
-  .bar5 {
-    display: flex;
-  }
-
-  .bar a {
-    color: #5e5e5e;
-  }
-
+.bar a {
+  color: #5e5e5e;
+} 
   /* ----------CONTENT----------- */
 
   /* inHome */

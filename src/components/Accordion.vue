@@ -6,9 +6,9 @@
     <img
       class="accordion_img"
       :class="{ 'hover-container-img': startHoverStates , 'rwd-img': rwdWidth }"
-      src="../assets/img/page-photo/inHome/Frame3.png"
+      :src="require(`@assets/img/page-photo/${imgSrc}`)"
       alt=""
-    >
+    ><img/>
     <div
       v-if="startHoverStates"
       class="hover-content"
@@ -47,11 +47,11 @@ export default {
     more: {
       type: Boolean,
       default: false
+    },
+    imgSrc: {
+      type: String,
+      default: 'inhome/inhome_1.png'
     }
-    // src: {
-    //   type: String,
-    //   default: ''
-    // }
   },
   setup () {
     const startHoverStates = ref(true);
@@ -171,7 +171,7 @@ export default {
 }
 
 .collapse {
-  height: 30px;
+  height: 45px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;

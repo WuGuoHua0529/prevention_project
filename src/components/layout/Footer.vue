@@ -15,10 +15,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   line-height: 0;
   width: 100%;
+  padding-top: 50px;
 
   img {
     width: 100%;

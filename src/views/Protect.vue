@@ -163,11 +163,7 @@
       </div>
 
     </div>
-    <div class="footer-container">
-      <div class="footer">
-        <img src="../assets/img/page-photo/bg/bottom.png" />
-      </div>
-    </div>
+    <Footer />
 
   </div>
 
@@ -200,11 +196,13 @@
 
 <script>
 import Accordion from '../components/Accordion.vue';
+import Footer from "@components/layout/Footer.vue";
 
 export default {
   name: 'Protect',
   components: {
-    Accordion
+    Accordion,
+    Footer
   },
   setup () {
   }

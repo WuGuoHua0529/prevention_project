@@ -3,26 +3,28 @@
   <div class="step_title">防災可以這麼做</div>
   <Step1 />
   <Step2 />
-  <!-- <Step3 /> -->
+  <Step3 />
   <!-- <Step3_2 /> -->
-  <!-- <Step4 /> -->
+  <Step4 />
   <Step5 />
   <Step6 />
   <Step7 />
-  <!-- <Step8 /> -->
+  <Step8 />
+  <Footer />
 </template>
 
 <script>
 import Container from "@components/earthquake/Container.vue";
 import Step1 from "@components/earthquake/Step1.vue";
 import Step2 from "@components/earthquake/Step2.vue";
-// import Step3 from "@components/earthquake/Step3.vue";
+import Step3 from "@components/earthquake/Step3.vue";
 // import Step3_2 from "@components/earthquake/Step3_2.vue";
-// import Step4 from "@components/earthquake/Step4.vue";
+import Step4 from "@components/earthquake/Step4.vue";
 import Step5 from "@components/earthquake/Step5.vue";
 import Step6 from "@components/earthquake/Step6.vue";
 import Step7 from "@components/earthquake/Step7.vue";
-// import Step8 from "@components/earthquake/Step8.vue";
+import Step8 from "@components/earthquake/Step8.vue";
+import Footer from "@components/layout/Footer.vue";
 
 export default {
   name: "Earthquake",
@@ -30,13 +32,14 @@ export default {
     Container,
     Step1,
     Step2,
-    // Step3,
+    Step3,
     // Step3_2,
-    // Step4,
+    Step4,
     Step5,
     Step6,
     Step7,
-    // Step8,
+    Step8,
+    Footer
   },
 };
 </script>

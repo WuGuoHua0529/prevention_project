@@ -23,6 +23,7 @@ import { ref, reactive } from 'vue';
 
 export default {
 name:"Earthquake1View",
+
 setup () {
 const contents_data1 = reactive(
 [

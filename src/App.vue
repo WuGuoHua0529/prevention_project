@@ -28,6 +28,5 @@ body,
 }
 
 #app {
-
 }
 </style>

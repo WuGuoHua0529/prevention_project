@@ -1,28 +1,29 @@
 <template>
-  <!-- <button @click="btnClick">push</button> -->
-<div class="header_title">災害可能發生的地方</div>
-<div v-for="item in contents_data1" :key="item.key">
-<transition name="fade">
-  <div v-show="showKey == item.key"  class="content-container">
-    <div class="earthquake-first fade-in">
-      <h2 class="unit_title">{{ item.unit_title }}</h2>
-      <div class="subtitle">{{ item.subtitle }}</div>
-      <ul v-for="(it, i) in item.data" :key="`data_${i}`" >
-        <li class="introduction" :class="{ content_title: it.content_title }">{{ it.content }}</li>
-      </ul>
-      <div class="progressbar"></div>
+  <div class="disaster">
+    <div class="header_title">災害可能發生的地方</div>
+    <div v-for="item in contents_data1" :key="item.key">
+      <transition name="fade">
+        <div v-show="showKey == item.key"  class="content-container">
+          <div class="earthquake-first fade-in">
+            <h2 class="unit_title">{{ item.unit_title }}</h2>
+            <div class="subtitle">{{ item.subtitle }}</div>
+            <ul v-for="(it, i) in item.data" :key="`data_${i}`" >
+              <li class="introduction" :class="{ content_title: it.content_title }">{{ it.content }}</li>
+            </ul>
+            <div class="progressbar"></div>
+          </div>
+            <img :src="require(`../img/earthquake_${item.key}.png`)">
+        </div>
+      </transition>
     </div>
-      <img :src="require(`../img/earthquake_${item.key}.png`)">
   </div>
-</transition>
-</div>
 </template>
 
 <script>
 import { ref, reactive } from 'vue';
 
 export default {
-name:"Earthquake1View",
+name:"Disaster",
 
 setup () {
 const contents_data1 = reactive(
@@ -88,234 +89,122 @@ let scrollNumUp = 0;
 let scrollNumDown = 0;
 const showKey = ref(1);
 let timer = false;
-// const btnClick = () => {
-//   showKey.value ++;
-// }
 
-//當大於物件的高度，則key值+1; 當物件高度減去上一個物件高度則key值-1，當key值＝1時，則停止減少;當key值＝5時，則停止增加。
 window.addEventListener('wheel', (e) => {
 if (timer === true) {
   return;
 }
-const delta = Math.sign(e.deltaY); // 求滾動方向，返回 -1(滑鼠往下) 或 1(滑鼠往上)
-const range = Math.abs(e.deltaY); // 把它轉成正函數
-console.log(delta, scrollNumUp, scrollNumDown, showKey.value, range);
-if (delta === 1) {
-  scrollNumUp += range
-  if (scrollNumUp > 180 && showKey.value > 1) {
-    // console.log(scrollNumUp);
-    showKey.value --;
-    scrollNumUp = 0;
-    timer = true;
-    setTimeout(() => {
-      timer = false;
-    }, 1000)
+const delta = Math.sign(e.deltaY);
+const range = Math.abs(e.deltaY);
+// console.log(delta, scrollNumUp, scrollNumDown, showKey.value, range);
+  if (delta === 1) {
+    scrollNumUp += range
+    if (scrollNumUp > 180 && showKey.value > 1) {
+      showKey.value --;
+      scrollNumUp = 0;
+      timer = true;
+      setTimeout(() => {
+        timer = false;
+      }, 1000)
+    }
+  } else {
+    scrollNumDown += range
+    if (scrollNumDown > 180 && showKey.value < 5) {
+      showKey.value ++;
+      scrollNumDown = 0;
+      timer = true;
+      setTimeout(() => {
+        timer = false;
+      }, 1000)
+    }
   }
-} else {
-  scrollNumDown += range
-  if (scrollNumDown > 180 && showKey.value < 5) {
-    // console.log(scrollNumDown);
-    showKey.value ++;
-    scrollNumDown = 0;
-    timer = true;
-    setTimeout(() => {
-      timer = false;
-    }, 1000)
-  }
-}
-// scrollNum = st <= 0 ? 0 :st;
-
-// const a = showKey.value ++; //需判斷不會小於1, 且不會大於五
-// console.log(a)
 })
 
-return {
-contents_data1,
-showKey,
-// scrollNum,
-// btnClick
-}
+  return {
+    contents_data1,
+    showKey
+  }
 }
 }
 </script>
 
 <style lang="scss" scoped>
 /*字體載入*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
 /*Reset CSS*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-font-family: 'Noto Sans TC', sans-serif;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-display: block;
-}
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Noto Sans TC', sans-serif;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
 
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
+  ol, ul {
+  list-style: none;
+  }
+
+  blockquote, q {
+  quotes: none;
+  }
+
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  content: '';
+  content: none;
+  }
+
+  table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
 
 /*Header css*/
 @media screen and (min-width: 1000px)  {
 /*header下方的資訊標題*/
-.header_title {
-background-color: #FFEEA3;
-border-radius: 0 0 0 248px;
-font-size: 48px;
-line-height: 70px;
-text-align: center;
-font-style: normal;
-font-weight: 700;
-color: #5E5E5E;
-padding: 35px 0;
-}
-
-/*內容區*/
-.content-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-left: 232px;
-height: 800px;
-}
-
-.content-container h2 {
-font-family: 'Noto Sans TC';
-font-style: normal;
-font-weight: 700;
-font-size: 78px;
-line-height: 113px;
-letter-spacing: 0.05em;
-color: #5E5E5E;
-margin-bottom: 100px;
-}
-
-.earthquake-first {
-/* display: flex;
-justify-content: space-between;
-align-items: center; */
-}
-
-.earthquake-first > div {
-display: flex;
-flex-flow: wrap;
-}
-
-.earthquake-first > ul {
-width: 480px;
-}
-
-.earthquake-first > div ul {
-width: 80%;
-}
-
-.earthquake-first .subtitle {
-font-family: 'Noto Sans TC';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 29px;
-letter-spacing: 0.02em;
-color: #7095AB;
-margin-bottom: 24px;
-}
-
-.earthquake-first .text-title{
-font-family: 'Noto Sans TC';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 26px;
-letter-spacing: 0.04em;
-color: #5E5E5E;
-}
-
-.earthquake-first .introduction {
-font-family: 'Noto Sans TC';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 156%;
-letter-spacing: 0.02em;
-color: #5E5E5E;
-margin-bottom: 24px;
-  &.content_title {
-    font-weight: bolder;
-    margin-bottom: 6px;
+  .header_title {
+    background-color: #FFEEA3;
+    border-radius: 0 0 0 248px;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    color: #5E5E5E;
+    padding: 20px 0;
+    margin-bottom: 35px;
   }
-}
 
-.content-container img {
-width: 60%;
-}
+  /*內容區*/
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 232px;
+    // height: 700px;
+  }
 
-/* 滾動動畫css */
-.fade-enter-active,
-.fade-leave-active {
-transition: opacity 0.5s ease;
-}
-
-.fade-enter-from
-.fade-leave-to {
-opacity: 0.5;
-}
-}
-
-@media screen and (min-width: 768px) and (max-width: 979px) {
-/* 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。 */
-}
-
-@media screen and (max-width: 767px) {
-/* 如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。 */
-}
-
-@media screen and (max-device-width: 480px) {
-/* 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
-.header_title {
-  background-color: #FFEEA3;
-  font-size: 16px;
-  line-height: 70px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 700;
-  color: #5E5E5E;
-  padding: 9px 0;
-}
-
-.content-container h2 {
-  display: none;
+  .content-container h2 {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 700;
@@ -323,67 +212,159 @@ opacity: 0.5;
   line-height: 113px;
   letter-spacing: 0.05em;
   color: #5E5E5E;
-  margin-bottom: 100px;
-}
-.content-container {
-  display: flex;
-  align-items: center;
-  flex-flow: column-reverse;
-}
-
-.content-container img {
-  width: 100%;
-  margin-bottom: 24px;
-}
-.earthquake-first {
-  padding: 0 46px;
-}
-.earthquake-first > div {
-  display: flex;
-  flex-flow: wrap;
-}
-
-/* .earthquake-first > ul {
-width: 480px;
-} */
-
-.earthquake-first > div ul {
-width: 80%;
-}
-
-.earthquake-first .text-title{
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: 0.04em;
-  color: #5E5E5E;
-}
-
-.earthquake-first .introduction {
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 156%;
-  letter-spacing: 0.02em;
-  color: #5E5E5E;
-  margin-bottom: 12px;
-  &.content_title {
-    font-weight: bolder;
-    margin-bottom: 6px;
+  margin-bottom: 50px;
   }
-}
-.earthquake-first .subtitle {
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  letter-spacing: 0.02em;
-  color: #7095AB;
-  margin-bottom: 24px;
-}
+
+  .earthquake-first > div {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .earthquake-first > ul {
+    width: 480px;
+  }
+
+  .earthquake-first > div ul {
+    width: 80%;
+  }
+
+  .earthquake-first .subtitle {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #7095AB;
+    margin-bottom: 24px;
+  }
+
+  .earthquake-first .text-title{
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #5E5E5E;
+  }
+
+  .earthquake-first .introduction {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: 0.02em;
+    color: #5E5E5E;
+    margin-bottom: 24px;
+      &.content_title {
+        font-weight: bolder;
+        margin-bottom: 6px;
+      }
+  }
+
+  .content-container img {
+    width: 45%;
+  }
+  .disaster {
+    width: 100vw;
+    height: 650px;
+    overflow-y: hidden;
+  }
+
+  /* 滾動動畫css */
+  .fade-enter-active {
+    transition: opacity 0.8s ease;
+  }
+  }
+
+
+  @media screen and (max-device-width: 480px) {
+  /* 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
+  .header_title {
+    background-color: #FFEEA3;
+    font-size: 16px;
+    line-height: 70px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    color: #5E5E5E;
+    padding: 9px 0;
+    margin-bottom: 15px;
+  }
+
+  .content-container h2 {
+    display: none;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 113px;
+    letter-spacing: 0.05em;
+    color: #5E5E5E;
+    margin-bottom: 100px;
+  }
+  .content-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+
+  .content-container img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .earthquake-first {
+    padding: 0 46px;
+  }
+  .earthquake-first > div {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .earthquake-first > div ul {
+  width: 80%;
+  }
+
+  .earthquake-first .text-title{
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #5E5E5E;
+  }
+
+  .earthquake-first .introduction {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: 0.02em;
+    color: #5E5E5E;
+    margin-bottom: 12px;
+    &.content_title {
+      font-weight: bolder;
+      margin-bottom: 6px;
+    }
+  }
+  .earthquake-first .subtitle {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #7095AB;
+    margin-bottom: 24px;
+  }
+  .disaster {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
 </style>

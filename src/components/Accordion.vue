@@ -8,7 +8,7 @@
       :class="{ 'hover-container-img': startHoverStates , 'rwd-img': rwdWidth }"
       :src="require(`@assets/img/page-photo/${imgSrc}`)"
       alt=""
-    ><img/>
+    />
     <div
       v-if="startHoverStates"
       class="hover-content"
@@ -66,7 +66,6 @@ export default {
 
     // 1.監聽尺寸大於ＸＸＸ
     window.addEventListener('resize', function () {
-      console.log('ffff');
       if (window.innerWidth >= 1024) {
         startHoverStates.value = true
       } else {
@@ -76,25 +75,10 @@ export default {
 
     });
 
-    //  2.監聽尺寸大於ＸＸＸ
-    //  window.addEventListener('resize', function() {
-    //   console.log('ccc44');
-    //   if (window.innerWidth <= 1024 && window.innerWidth >= 767 ){
-    //     rwdWidth.value = true
-    //   }else{
-
-    //     rwdWidth.value = false 
-    //     // 跑不出東西????
-    //   }
-
-    // });
-
     return {
       startHoverStates,
       collapseStates,
       changeState,
-      // rwdWidth,
-
     }
   }
 }

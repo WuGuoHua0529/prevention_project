@@ -8,7 +8,8 @@ function resolve (dir) {
 module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/prevention-project/'
+    // ? '/prevention-project/' 切換
+    ? './together/'
     : '/',
   chainWebpack: (config) => {
     config.resolve.alias
